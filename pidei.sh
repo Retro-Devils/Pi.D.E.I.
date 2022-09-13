@@ -1,6 +1,6 @@
 #-----------INTRO VIDEO-----------#
 clear
-omxplayer "$HOME"/PI-DEI/intro.mp4  > /dev/null 2>&1
+omxplayer "$HOME"/pidei/intro.mp4  > /dev/null 2>&1
 
 function emu-menu() {
 dialog  --sleep 1 --title EASY EMU INSTALELR INFO" --msgbox " 
