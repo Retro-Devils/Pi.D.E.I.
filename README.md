@@ -39,7 +39,7 @@
 - Choose System you want to install emsu for click go. If a multi core click go then choose core(s) and click go again.
 
 
-# Terminal/Command  Line usage 
+# Usage from Terminal/Command Line 
 - Open terminal type  "pidei"  and then press enter.
 - Choose System you want to install emsu for click go. If a multi core click go then choose core(s) and click go again.
 
