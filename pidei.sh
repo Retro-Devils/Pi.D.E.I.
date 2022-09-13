@@ -22,18 +22,18 @@ SA MEANS STANDALONE EMU" 0 0
       2 "AmigaCD32<--------------------->RA PUAE" \
       3 "Amstrad CPC<------------------->RA CAPRICE32" \
       4 "Arcade<------------------------>RA MAME2003" \
-      5 "Arcadia                          201KB       47 GAMES" \
-      6 "Astrocade                        174KB       48 GAMES" \
-      7 "Atari800                        5.21MB      100 GAMES" \
-      8 "Atari2600                        2.6MB      615 GAMES" \
-      9 "Atari5200                        928KB       81 GAMES" \
-      10 "Atari7800                          2MB       54 GAMES" \
-      11 "AtariLynx                         10MB       77 GAMES" \
-      12 "AtariST                           66MB      100 GAMES" \
-      13 "Atomiswave                       2.5GB       24 GAMES" \
-      14 "Commadore64                      9.5MB      144 GAMES" \
-      15 "Colecovision                     2.7MB      146 GAMES" \
-      16 "Dragon32                         897KB       51 GAMES" \
+      5 "Arcadia<------------------------>" \
+      6 "Astrocade<------------------------>" \
+      7 "Atari800<------------------------>" \
+      8 "Atari2600<------------------------>" \
+      9 "Atari5200<------------------------>" \
+      10 "Atari7800<------------------------>" \
+      11 "AtariLynx<------------------------>" \
+      12 "AtariST<------------------------>" \
+      13 "Atomiswave<------------------------>" \
+      14 "Commadore64<------------------------>" \
+      15 "Colecovision<------------------------>" \
+      16 "Dragon32<------------------------>" \
       17 "Dreamcast                       12.6GB       19 GAMES" \
       18 "Electron                         2.5MB      152 GAMES" \
       19 "Famicon                           19MB      169 GAMES" \
@@ -63,8 +63,8 @@ SA MEANS STANDALONE EMU" 0 0
       43 "PlayStation 1                      3GB       29 GAMES" \
       44 "PSP                              ???GB      600 GAMES" \
       45 "Sega Model 3.                     ??GB       15 GAMES" \
-      46 "Sega Saturn                      108GB      303 GAMES" \
-      47 "Sega Saturn Japan                3.9GB       18 GAMES" \
+      46 "Sega Saturn" \
+      47 "Sega Saturn Japan" \
       48 "ScummVM                          2.5GB       21 GAMES" \
       49 "Sega32x                           63MB       37 GAMES" \
       50 "SegaCD                            11GB       52 GAMES" \
