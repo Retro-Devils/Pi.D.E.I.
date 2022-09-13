@@ -6,7 +6,7 @@ A unoffical emu installer for Retropie.
 - Easily install offical emus press go it installs for you
 - Force Update Retropie Setup 
 - Easily install community/unoffical emus
-- Install Emus supported for your pi
+- Install multi Retroarch with one button push
 
 # Offical Emus Supported 
 - All emus in Offical Retropie Setup can be installed through Pi.D.E.I
