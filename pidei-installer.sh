@@ -28,9 +28,10 @@ if [ -d "$HOME/pidei/" ]; then sudo rm -R $HOME/pidei/; fi
 if [ -f "$HOME/RetroPie/retropiemenu/pidei.sh" ]; then sudo rm $HOME/RetroPie/retropiemenupidei.sh; fi
 wget https://github.com/Retro-Devils/Pi.D.E.I./blob/main/intro.mp4?raw=true -P $HOME/pidei/
 wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei.sh -P $HOME/pidei/
+wget https://github.com/Retro-Devils/Pi.D.E.I./raw/main/logo.png -P $HOME/pidei/
 sudo https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei -f /usr/local/bin/pidei
 cp $HOME/pidei/pidei.sh -f $HOME/RetroPie/retropiemenu/
-cp $HOME/pidei/pidei.png -f $HOME/RetroPie/retropiemenu/icons/
+cp $HOME/pidei/logo.png -f $HOME/RetroPie/retropiemenu/icons/
 sudo chmod 755 /usr/local/bin/pidei
 chmod 755 $HOME/RetroPie/retropiemenu/pidei.sh
 sleep 2
