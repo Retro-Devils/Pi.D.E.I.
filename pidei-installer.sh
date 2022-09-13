@@ -10,7 +10,7 @@ function pidei-install-menu() {
     while true; do
         choice=$(dialog --backtitle "$BACKTITLE" --title " Pi.D.E.I. VERSION 1.0 " \
             --ok-label Select --cancel-label Exit-Installer \
-            --menu "PI-D.E.I INSTALLER" 25 40 40 \
+            --menu "Pi.D.E.I INSTALLER" 25 40 40 \
             1 "Install/Update Pi.D.E.I. " \
             2 "Pi.D.E.I Information   " \
             2>&1 > /dev/tty)
