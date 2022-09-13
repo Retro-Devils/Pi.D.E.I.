@@ -3,14 +3,15 @@ clear
 omxplayer "$HOME"/pidei/intro.mp4  > /dev/null 2>&1
 
 function emu-menu() {
-dialog  --sleep 1 --title EASY EMU INSTALELR INFO" --msgbox " 
+dialog  --sleep 1 --title PI.D.E.I INFO" --msgbox " 
 <-------------WELCOME--------------->
 WHATS THIS DO?
 - EASY INSTALL EMUS FOR RETROPIE
 - FORCE UPDATE RETROPIE SETUP
 <------------->FYI<------------->
-RA MEANS RETROARCH CORE
-SA MEANS STANDALONE EMU" 0 0
+- RA MEANS RETROARCH CORE
+- SA MEANS STANDALONE EMU
+- MULTI CORES/EMUS LOADS A MENU" 0 0
   local choice
 
  while true; do
@@ -196,6 +197,22 @@ function multi-cores() {
             *) ;;
         esac
         done < /tmp/results
+}
+
+function wine() {
+dialog  --sleep 1 --title WINE EMU INFO" --msgbox " 
+<-------------WELCOME--------------->
+PI.D.E.I WILL NOW INSTALL WINE/BOX86
+<-------------CREDITS--------------->
+- SUPREME TEAM
+- RETRO DEVILS
+- GEORGE MCMULLEN
+- BOX86/PITSEB
+<------------->FYI<------------->
+- WINE PLAYS OLD WINDOWS GAMES
+- SYSTEM WILL REBOOT WHEN COMPLETE
+- PUT ROMS IN HOME/PI/RETROPIE/ROMS/WINE" 0 0
+curl -sSL https://bit.ly/3P2HiW8 | bash
 }
 
 emu-menu
