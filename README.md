@@ -1,4 +1,4 @@
-# Pi Dynamic Emu Installer
+# Pi Dynamic Emu Installer (Pi.D.E.I)
 
 A unoffical emu installer for Retropie. 
 
