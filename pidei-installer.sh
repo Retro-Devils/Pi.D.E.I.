@@ -45,3 +45,5 @@ fi
 echo "THANKS FOR INSTALLING ENJOY!!"
 sleep 5
 }
+
+pidei-install-menu
