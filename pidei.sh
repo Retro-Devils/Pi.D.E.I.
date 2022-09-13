@@ -1,9 +1,10 @@
+#!/bin/bash
 #-----------INTRO VIDEO-----------#
 clear
 omxplayer "$HOME"/pidei/intro.mp4  > /dev/null 2>&1
 
 function emu-menu() {
-dialog  --sleep 1 --title PI.D.E.I INFO" --msgbox " 
+dialog  --sleep 1 --title "PI.D.E.I INFO" --msgbox " 
 <-------------WELCOME--------------->
 WHATS THIS DO?
 - EASY INSTALL EMUS FOR RETROPIE
@@ -13,7 +14,6 @@ WHATS THIS DO?
 - SA MEANS STANDALONE EMU
 - MULTI CORES/EMUS LOADS A MENU" 0 0
   local choice
-
  while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "EASY EMU INSTALLER" \
       --ok-label Install --cancel-label Back \
@@ -89,7 +89,6 @@ WHATS THIS DO?
       T1 "FORCE RETROPIE SETUP SCRIPT UPDATE                   " \
       T2 "UPDATE PI.D.E.I                                      " \
       2>&1 >/dev/tty)
-
     case "$choice" in
     1) install-emu "Amiga" "lr-puae" ;;
     2) install-emu "Amigacd32" "lr-puae" ;;
@@ -163,20 +162,16 @@ WHATS THIS DO?
      *) break ;;
     esac
    done
-fi
 }
-
 ##-----------------------------Example-----------------------------##
 ##System-Name<------------------------>Core-Name
 ##System-Name<------------------------>Mulit-Emus/Cores
 ##install-emu "system-name" "lr-core1" "lr-core2" "lr-core3" "standalone emu1" "standalone emu2"
 ##-----------------------------------------------------------------##
-
 function install-emu() {
 cd $HOME/RetroPie-Setup
 sudo ./retropie_packages.sh "$2"
 }
-
 function multi-cores() {
           whiptail --clear --title ""$1" Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
       --ok-button Install --cancel-button Back \
@@ -197,9 +192,8 @@ function multi-cores() {
         esac
         done < /tmp/results
 }
-
 function wine() {
-dialog  --sleep 1 --title WINE EMU INFO" --msgbox " 
+dialog  --sleep 1 --title "WINE EMU INFO" --msgbox " 
 <-------------WELCOME--------------->
 PI.D.E.I WILL NOW INSTALL WINE/BOX86
 <-------------CREDITS--------------->
