@@ -36,10 +36,10 @@
 
 # Usage From RetroPie
 - In RetroPie. Go to click options and click pidei
-- Choose System you want to install emsu for click go. If a multi core click go then choose core(s) and click go again.
+- Choose System you want to install emus for click go. If a multi core click go then choose core(s) and click go again.
 
 
 # Usage from Terminal/Command Line 
 - Open terminal type  "pidei"  and then press enter.
-- Choose System you want to install emsu for click go. If a multi core click go then choose core(s) and click go again.
+- Choose System you want to install emus for click go. If a multi core click go then choose core(s) and click go again.
 
