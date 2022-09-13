@@ -161,7 +161,28 @@ fi
 }
 function install-emu() {
 cd $HOME/RetroPie-Setup
-sudo ./retropie_packages.sh "$1"
+sudo ./retropie_packages.sh "$2"
+}
+
+function multi-cores() {
+          whiptail --clear --title ""$1" Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+                "1" ""$2" Core" off \
+                "2" ""$3" Core" off \
+                "3" ""$4" Core" off \
+                "4" ""$5" Core" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+
+            1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
+            2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
+            4) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" ;;
+            *) ;;
+        esac
+        done < /tmp/results
 }
 
 emu-menu
