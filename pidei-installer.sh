@@ -34,7 +34,7 @@ sudo cp $HOME/pidei/pidei -f /usr/local/bin/
 sleep 1
 if [ ! -s "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then sudo rm -f $HOME/RetroPie/retropiemenu/gamelist.xml; fi
 if [ ! -f "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml $HOME/RetroPie/retropiemenu/gamelist.xml; fi
-CONTENT1="\t<game>\n\t\t<path>./pedei.sh</path>\n\t\t<name>Pi.D.E.I.</name>\n\t\t<desc>A Dynamic tool to install emus on RetroPie. From offical emus to community made emus.</desc>\n\t\t<image>./icons/pidei.png</image>\n\t\t<releasedate>20220105T173842</releasedate>\n\t\t<developer>The Retro Devils</developer>\n\t\t<publisher>The Retro Devils</publisher>\n\t\t<genre>Tools</genre>\n\t</game>"
+CONTENT1="\t<game>\n\t\t<path>./pedei.sh</path>\n\t\t<name>Pi.D.E.I.</name>\n\t\t<desc>Pi Dynamic Emu Installer (Pi.D.E.I.) is a tool to install emus on RetroPie. From offical emus to community made emus.</desc>\n\t\t<image>./icons/pidei.png</image>\n\t\t<releasedate>20220105T173842</releasedate>\n\t\t<developer>The Retro Devils</developer>\n\t\t<publisher>The Retro Devils</publisher>\n\t\t<genre>Tools</genre>\n\t</game>"
 C1=$(echo $CONTENT1 | sed 's/\//\\\//g')
 if grep -q pidei.sh "$HOME/RetroPie/retropiemenu/gamelist.xml"; then echo "gamelist.xml entry confirmed"
 else
