@@ -1,6 +1,7 @@
 # Pi Dynamic Emu Installer (Pi.D.E.I)
 - A unoffical emu installer for Retropie. 
 - Last Update 9/12/22
+- Version 1.00
 
 <-------------------------------------------------------------------------------------------------------->
 
