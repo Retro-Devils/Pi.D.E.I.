@@ -28,10 +28,12 @@ if [ -d "$HOME/pidei/" ]; then sudo rm -R $HOME/pidei/; fi
 if [ -f "$HOME/RetroPie/retropiemenu/pidei.sh" ]; then sudo rm $HOME/RetroPie/retropiemenupidei.sh; fi
 wget https://github.com/Retro-Devils/Pi.D.E.I./blob/main/intro.mp4?raw=true -P $HOME/pidei/
 wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei.sh -P $HOME/pidei/
+sudo https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei -f /usr/local/bin/pidei
 cp $HOME/pidei/pidei.sh -f $HOME/RetroPie/retropiemenu/
 cp $HOME/pidei/pidei.png -f $HOME/RetroPie/retropiemenu/icons/
-sudo cp $HOME/pidei/pidei -f /usr/local/bin/
-sleep 1
+sudo chmod 755 /usr/local/bin/pidei
+chmod 755 $HOME/RetroPie/retropiemenu/pidei.sh
+sleep 2
 if [ ! -s "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then sudo rm -f $HOME/RetroPie/retropiemenu/gamelist.xml; fi
 if [ ! -f "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml $HOME/RetroPie/retropiemenu/gamelist.xml; fi
 CONTENT1="\t<game>\n\t\t<path>./pedei.sh</path>\n\t\t<name>Pi.D.E.I.</name>\n\t\t<desc>Pi Dynamic Emu Installer (Pi.D.E.I.) is a tool to install emus on RetroPie. From offical emus to community made emus.</desc>\n\t\t<image>./icons/pidei.png</image>\n\t\t<releasedate>20220105T173842</releasedate>\n\t\t<developer>The Retro Devils</developer>\n\t\t<publisher>The Retro Devils</publisher>\n\t\t<genre>Tools</genre>\n\t</game>"
