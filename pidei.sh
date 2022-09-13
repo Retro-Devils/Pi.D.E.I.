@@ -179,7 +179,7 @@ sudo ./retropie_packages.sh "$2"
 
 function multi-cores() {
           whiptail --clear --title ""$1" Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
-      --ok-button Download --cancel-button Back \
+      --ok-button Install --cancel-button Back \
                 "+" "<--->RetroArch Cores<--->" off \
                 "1" ""$2" Retroarch Core" off \
                 "2" ""$3" Retroarch Core" off \
@@ -189,7 +189,6 @@ function multi-cores() {
     while read -r choice  
         do
         case $choice in
-
             1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
             2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
             4) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
