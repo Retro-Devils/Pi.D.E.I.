@@ -1,8 +1,8 @@
+#-----------INTRO VIDEO-----------#
+clear
+omxplayer "$HOME"/Pi-DEI/intro.mp4  > /dev/null 2>&1
+
 function emu-menu() {
-if [ $confirm = 1 ]; then
-dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
-PLEASE Install/Update Devils Box" 0 0
-else
 dialog  --sleep 1 --title EASY EMU INSTALELR INFO" --msgbox " 
 <-------------WELCOME--------------->
 WHATS THIS DO?
