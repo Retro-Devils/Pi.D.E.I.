@@ -26,7 +26,7 @@ function pidei-install-menu() {
 function install_pidei() {
 if [ -d "$HOME/pidei/" ]; then sudo rm -R $HOME/pidei/; fi
 if [ -f "$HOME/RetroPie/retropiemenu/pidei.sh" ]; then sudo rm $HOME/RetroPie/retropiemenupidei.sh; fi
-wget https://github.com/Retro-Devils/Pi.D.E.I./blob/main/intro.mp4?raw=true -P $HOME/pidei/
+wget https://github.com/Retro-Devils/Pi.D.E.I./raw/main/intro.mp4 -P $HOME/pidei/
 wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei.sh -P $HOME/pidei/
 wget https://github.com/Retro-Devils/Pi.D.E.I./raw/main/pi-dei-logo.png -P $HOME/pidei/
 sudo wget -O "/usr/local/bin/pidei" https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei.sh
