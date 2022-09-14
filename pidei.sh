@@ -191,7 +191,7 @@ function multi-cores() {
 
 ##-----------------------------UnOffical Emus/Cores-----------------------------##
 
-function wine() {
+function install-wine() {
 dialog  --sleep 1 --title "WINE EMU INFO" --msgbox " 
 <-------------WELCOME--------------->
 PI.D.E.I WILL NOW INSTALL WINE/BOX86
@@ -207,7 +207,7 @@ PI.D.E.I WILL NOW INSTALL WINE/BOX86
 curl -sSL https://bit.ly/3P2HiW8 | bash
 }
 
-function model-3() {
+function install-model-3() {
 https://raw.githubusercontent.com/Retro-Devils/Sega-Model-3-PI-4/main/SM3-INSTALLER.sh
 }
 
