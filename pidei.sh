@@ -1,18 +1,13 @@
 #!/bin/bash
+export NCURSES_NO_UTF8_ACS=1
+BACKTITLE="<-----Pi.D.E.I-----Pi Dynamic Emu Installer----->"
+
+
 #-----------INTRO VIDEO-----------#
 clear
 omxplayer "$HOME"/pidei/intro.mp4  > /dev/null 2>&1
 
 function emu-menu() {
-dialog  --sleep 1 --title "PI.D.E.I INFO" --msgbox " 
-<-------------WELCOME--------------->
-WHATS THIS DO?
-- EASY INSTALL EMUS FOR RETROPIE
-- FORCE UPDATE RETROPIE SETUP
-<------------->FYI<------------->
-- RA MEANS RETROARCH CORE
-- SA MEANS STANDALONE EMU
-- MULTI CORES/EMUS LOADS A MENU" 0 0
   local choice
  while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "EASY EMU INSTALLER" \
@@ -22,47 +17,47 @@ WHATS THIS DO?
       1 "Amiga<------------------------->RA PUAE" \
       2 "AmigaCD32<--------------------->RA PUAE" \
       3 "Amstrad CPC<------------------->RA CAPRICE32" \
-      4 "Arcade<------------------------>RA MAME2003" \
+      4 "Arcade<------------------------MULTI CORES/EMUS" \
       5 "Arcadia<------------------------>" \
       6 "Astrocade<------------------------>" \
-      7 "Atari800<------------------------>" \
-      8 "Atari2600<------------------------>" \
-      9 "Atari5200<------------------------>" \
-      10 "Atari7800<------------------------>" \
-      11 "AtariLynx<------------------------>" \
-      12 "AtariST<------------------------>" \
+      7 "Atari800<------------------------>RA ATARI800"\
+      8 "Atari2600<------------------------>RA STELLA" \
+      9 "Atari5200<------------------------>RA ATARI800" \
+      10 "Atari7800<------------------------>RA PROSYSTEM" \
+      11 "AtariLynx<------------------------>RA BEETLE LYNX" \
+      12 "AtariST<------------------------> RA HATARI" \
       13 "Atomiswave<------------------------>" \
       14 "Commadore64<------------------------>" \
-      15 "Colecovision<------------------------>" \
-      16 "Dragon32<------------------------>" \
-      17 "Dreamcast<------------------------>" \
-      18 "Electron<------------------------>" \
-      19 "Famicon<------------------------>" \
-      20 "Famicom Disk<------------------------>" \
-      21 "Game and Watch<------------------------>" \
-      22 "Gameboy<------------------------>MULTI CORES" \
-      23 "Gameboy Advance                  3.4GB     1006 GAMES" \
-      24 "Gameboy Color                    232MB      538 GAMES" \
-      25 "Gamegear                          42MB      249 GAMES" \
-      26 "Intellivision                      1MB       62 GAMES" \
-      27 "****Lightgun MAME****             ??GB       ?? GAMES" \
-      28 "MarkIII                            6MB       58 GAMES" \
-      29 "Mastersystem                      35MB      280 GAMES" \
-      30 "Genesis/Megadrive                409MB      561 GAMES" \
-      31 "Genesis/Megadrive-Japan          149MB      278 GAMES" \
-      32 "MSX                               30MB      708 GAMES" \
-      33 "MSX 2                           6.24MB       83 GAMES" \
-      34 "Nintendo 64                      5.0GB      338 GAMES" \
-      35 "Naomi                            1.5GB       15 GAMES" \
-      36 "Nintendo DS                        4GB      171 GAMES" \
-      37 "NeoGeo                           2.3GB      142 GAMES" \
-      38 "Neo Geo Pocket Color              21MB       40 GAMES" \
-      39 "Nintendo Entertainment System    100MB      869 GAMES" \
-      40 "Openbor                         1.84GB       37 GAMES" \
-      41 "Oric                             5.4MB      136 GAMES" \
-      42 "Pokemini                         5.4MB       44 GAMES" \
-      43 "PlayStation 1                      3GB       29 GAMES" \
-      44 "PSP                              ???GB      600 GAMES" \
+      15 "Colecovision<------------------------>RA BLUEMSX" \
+      16 "Dragon32<------------------------>SA XROAR" \
+      17 "Daphne<------------------------>DAPHNE" \
+      18 "Dreamcast<------------------------>MULTI CORES/EMUS" \
+      19 "Electron<------------------------>" \
+      20 "Famicon<------------------------>" \
+      21 "Famicom Disk<------------------------>" \
+      22 "Game and Watch<------------------------>" \
+      23 "Gameboy<------------------------>MULTI CORES/EMUS" \
+      24 "Gameboy Advance<------------------------>MULTI CORES/EMUS" \
+      25 "Gameboy Color<------------------------>MULTI CORES/EMUS" \
+      26 "Gamegear<------------------------>MULTI CORES/EMUS" \
+      27 "Intellivision<------------------------>RA FREEINTV" \
+      28 "MarkIII<------------------------>" \
+      29 "Mastersystem<------------------------>" \
+      30 "Genesis/Megadrive<------------------------>" \
+      31 "Genesis/Megadrive-Japan<------------------------>" \
+      32 "MSX<------------------------>" \
+      33 "MSX 2<------------------------>" \
+      34 "Nintendo 64<------------------------>" \
+      35 "Naomi<------------------------>" \
+      36 "Nintendo DS<------------------------>" \
+      37 "NeoGeo<------------------------>" \
+      38 "Neo Geo Pocket Color<------------------------>" \
+      39 "Nintendo Entertainment System<------------------------>" \
+      40 "Openbor<------------------------>" \
+      41 "Oric<------------------------>" \
+      42 "Pokemini<------------------------>" \
+      43 "PlayStation 1<------------------------>" \
+      44 "PSP<------------------------>" \
       45 "Sega Model 3.                     ??GB       15 GAMES" \
       46 "Sega Saturn" \
       47 "Sega Saturn Japan" \
@@ -88,6 +83,8 @@ WHATS THIS DO?
        + "<----------------Pi.D.E.I Tools--------------------->" \
       T1 "FORCE RETROPIE SETUP SCRIPT UPDATE                   " \
       T2 "UPDATE PI.D.E.I                                      " \
+      T3 "Pi DYNAMIC EMU INSTALLER INFORMATION                 " \
+      T4 "Pi DYNAMIC EMU INSTALLER CRDITS                      " \
       2>&1 >/dev/tty)
     case "$choice" in
     1) install-emu "Amiga" "lr-puae" ;;
@@ -106,17 +103,17 @@ WHATS THIS DO?
     14) install-emu "C64" ;;
     15) install-emu "Coleco" "lr-bluemsx" ;;
     16) install-emu "Dragon32" "xroar" ;;
-    17) install-emu "Dreamcast" "redream" ;;
-    18) install-emu "Electron" ;;
-    19) install-emu "Famicon" ;;
-    20) install-emu "FDS" ;;
-    21) install-emu "Game&Watch" ;;
-    22) multi-cores "GameBoy" "lr-mgba" "lr-gb" ;;
-    23) install-emu "GameBoy Advacnce" "lr-mgba" ;;
-    24) install-emu "GameBoy Color" ;;
-    25) install-emu "Game Gear" "lr-genesis-plus-gx" ;;
-    26) install-emu "Intellivision" "lr-freeintv" ;;
-    27) install-emu "Lightgun" ;;
+    17) install-emu "Daphne" "Daphne" ;;
+    18) install-emu "Dreamcast" "lr-dreamcast" "NO" "redream" ;;
+    19) install-emu "Electron" ;;
+    20) install-emu "Famicon" ;;
+    21) install-emu "FDS" ;;
+    22) install-emu "Game&Watch" ;;
+    23) multi-cores "GameBoy" "lr-mgba" "lr-gb" ;;
+    24) install-emu "GameBoy Advacnce" "lr-mgba" ;;
+    25) install-emu "GameBoy Color" ;;
+    26) install-emu "Game Gear" "lr-genesis-plus-gx" "CORE2" "STANDALONE-EMU" ;;
+    27) install-emu "Intellivision" "lr-freeintv" ;;
     28) install-emu "Markiii" ;;
     29) install-emu "Mastersystem" ;;
     30) install-emu "Megadrive" "lr-genesis-plus-gx" ;;
@@ -159,15 +156,14 @@ WHATS THIS DO?
      +) none  ;;
     T1) update-setup-script ;;
     T2) update-pidei ;;
+    T3) pidei-info ;;
+    T4) pidei-credits ;;
      *) break ;;
     esac
    done
 }
-##-----------------------------Example-----------------------------##
-##System-Name<------------------------>Core-Name
-##System-Name<------------------------>Mulit-Emus/Cores
-##install-emu "system-name" "lr-core1" "lr-core2" "lr-core3" "standalone emu1" "standalone emu2"
-##-----------------------------------------------------------------##
+##-----------------------------Offical Cores & Emus-----------------------------##
+
 function install-emu() {
 cd $HOME/RetroPie-Setup
 sudo ./retropie_packages.sh "$2"
@@ -192,6 +188,9 @@ function multi-cores() {
         esac
         done < /tmp/results
 }
+
+##-----------------------------UnOffical Emus/Cores-----------------------------##
+
 function wine() {
 dialog  --sleep 1 --title "WINE EMU INFO" --msgbox " 
 <-------------WELCOME--------------->
@@ -208,4 +207,40 @@ PI.D.E.I WILL NOW INSTALL WINE/BOX86
 curl -sSL https://bit.ly/3P2HiW8 | bash
 }
 
+function model-3() {
+https://raw.githubusercontent.com/Retro-Devils/Sega-Model-3-PI-4/main/SM3-INSTALLER.sh
+}
+
+
+###-----------------------------PI.D.E.I TOOLS-----------------------------###
+
+function update-setup-script() {
+cd /home/pi/RetroPie-Setup
+git checkout .; git reset --hard HEAD; git pull
+}
+
+function update-pedei() {
+curl -sSL https://bit.ly/Install-PI-DEI | bash
+}
+
+
+function pidei-info() {
+dialog  --sleep 1 --title "PI.D.E.I INFO" --msgbox " 
+<-------------WELCOME--------------->
+WHATS THIS DO?
+- EASY INSTALL EMUS FOR RETROPIE
+- FORCE UPDATE RETROPIE SETUP
+<------------->FYI<------------->
+- RA MEANS RETROARCH CORE
+- SA MEANS STANDALONE EMU
+- MULTI CORES/EMUS LOADS A MENU" 0 0
+}
+
+function pidei-credits() {
+dialog  --sleep 1 --title "PI.D.E.I CREDITS" --msgbox " 
+<-------------CREDITS--------------->
+- ALL THE DEVILS 
+- RETROPIE OFFICAL 
+- CREDITS FOR EACH EMU WITH EMU INFO" 0 0
+}
 emu-menu
