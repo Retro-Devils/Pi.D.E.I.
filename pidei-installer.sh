@@ -16,14 +16,14 @@ function pidei-install-menu() {
             2>&1 > /dev/tty)
 
         case "$choice" in
-            1) install_pidei  ;;
+            1) install-pidei  ;;
             2) pidei-info     ;;
             *) break       ;;
         esac
     done
 }
 
-function install_pidei() {
+function install-pidei() {
 if [ -d "$HOME/pidei/" ]; then sudo rm -R "$HOME"/pidei/; fi
 if [ -f "$HOME/RetroPie/retropiemenu/pidei.sh" ]; then sudo rm "$HOME"/RetroPie/retropiemenupidei.sh; fi
 wget https://github.com/Retro-Devils/Pi.D.E.I./raw/main/intro.mp4 -P "$HOME"/pidei/
@@ -35,15 +35,17 @@ cp "$HOME"/pidei/pi-dei-logo.png -f "$HOME"/RetroPie/retropiemenu/icons/
 sudo chmod 755 /usr/local/bin/pidei
 chmod 755 "$HOME"/RetroPie/retropiemenu/pidei.sh
 sleep 2
+sudo rm -R "$HOME"/pidei/
+sleep 2
 if [ ! -s "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then sudo rm -f $HOME/RetroPie/retropiemenu/gamelist.xml; fi
 if [ ! -f "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml $HOME/RetroPie/retropiemenu/gamelist.xml; fi
 CONTENT1="\t<game>\n\t\t<path>./pidei.sh</path>\n\t\t<name>Pi Dynamic Emu Installer</name>\n\t\t<desc>PI Dynamic Emu Installer is a tool to install offical and unoffical emus with ease. </desc>\n\t\t<image>./icons/pi-dei-logo.png</image>\n\t\t<releasedate>20220105T173842</releasedate>\n\t\t<developer>The Retro Devils</developer>\n\t\t<publisher>The Retro Devils</publisher>\n\t\t<genre>Pi-DEI Script</genre>\n\t</game>"
-C1=$(echo "$CONTENT1" | sed 's/\//\\\//g')
+C1=$(echo $CONTENT1 | sed 's/\//\\\//g')
 if grep -q pidei.sh "$HOME/RetroPie/retropiemenu/gamelist.xml"; then echo "gamelist.xml entry confirmed"
 else
-	sed "/<\/gameList>/ s/.*/${C1}\n&/" "$HOME"/RetroPie/retropiemenu/gamelist.xml > "$HOME"/temp
-	cat "$HOME"/temp > "$HOME"/RetroPie/retropiemenu/gamelist.xml
-	rm -f "$HOME"/temp
+	sed "/<\/gameList>/ s/.*/${C1}\n&/" $HOME/RetroPie/retropiemenu/gamelist.xml > $HOME/temp
+	cat $HOME/temp > $HOME/RetroPie/retropiemenu/gamelist.xml
+	rm -f $HOME/temp
 fi
 echo "THANKS FOR INSTALLING ENJOY!!"
 sleep 5
