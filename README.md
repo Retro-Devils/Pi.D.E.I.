@@ -21,7 +21,7 @@
 # Unoffical Emus Supported 
 - Model 3
 - Wine
-
+- SNES MSU1
 
 # Experimental Unoffical Emus Supported 
 - None Currently 
