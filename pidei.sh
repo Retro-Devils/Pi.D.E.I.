@@ -58,33 +58,33 @@ function emu-menu() {
       42 "Pokemini<------------------------>" \
       43 "PlayStation 1<------------------------>" \
       44 "PSP<------------------------>" \
-      45 "Sega Model 3.                     ??GB       15 GAMES" \
-      46 "Sega Saturn" \
-      47 "Sega Saturn Japan" \
-      48 "ScummVM                          2.5GB       21 GAMES" \
-      49 "Sega32x                           63MB       37 GAMES" \
-      50 "SegaCD                            11GB       52 GAMES" \
-      51 "Super Famicon                    475MB      487 GAMES" \
-      52 "SG-1000                            1MB       68 GAMES" \
-      53 "SNES                             508MB      603 GAMES" \
-      54 "SNES MSU1                         ??MB       ?? GAMES" \
-      55 "SuperGraffiix                    2.4MB        5 GAMES" \
-      56 "Turbo Graffix 16/PC Engine        20MB       94 GAMES" \
-      57 "Vectrex                          201KB       20 GAMES" \
-      58 "VideoPAC                         430KB       99 GAMES" \
-      59 "Virtual Boy                        8MB       24 GAMES" \
-      60 "Dreamcast VMU                      3MB      115 GAMES" \
-      61 "Wine" \
-      62 "Wonderswan Color                 116MB       84 GAMES" \
-      63 "Sharp X1                         7.6MB       69 GAMES" \
-      64 "Sharp X68000                     504MB      418 GAMES" \
-      65 "ZMachine                           4MB       30 GAMES" \
-      66 "ZXSpectrum                        38MB     1111 GAMES" \
+      45 "Sega Model 3<---------------->CORE/EMU" \
+      46 "Sega Saturn<---------------->CORE/EMU" \
+      47 "Sega Saturn Japan<---------------->CORE/EMU" \
+      48 "ScummVM<---------------->CORE/EMU" \
+      49 "Sega32x<---------------->CORE/EMU" \
+      50 "SegaCD<---------------->CORE/EMU" \
+      51 "Super Famicon<---------------->CORE/EMU" \
+      52 "SG-1000<---------------->CORE/EMU" \
+      53 "SNES<---------------->CORE/EMU" \
+      54 "SNES MSU1<---------------->CORE/EMU" \
+      55 "SuperGraffiix<---------------->CORE/EMU" \
+      56 "Turbo Graffix 16/PC Engine<---------------->CORE/EMU" \
+      57 "Vectrex<---------------->CORE/EMU" \
+      58 "VideoPAC<---------------->CORE/EMU" \
+      59 "Virtual Boy<---------------->CORE/EMU" \
+      60 "Dreamcast VMU<---------------->CORE/EMU" \
+      61 "Wine<---------------->Wine/Box86" \
+      62 "Wonderswan Color<---------------->CORE/EMU" \
+      63 "Sharp X1<---------------->CORE/EMU" \
+      64 "Sharp X68000<---------------->CORE/EMU" \
+      65 "ZMachine<---------------->CORE/EMU" \
+      66 "ZXSpectrum<---------------->CORE/EMU" \
        + "<----------------Pi.D.E.I Tools--------------------->" \
       T1 "FORCE RETROPIE SETUP SCRIPT UPDATE                   " \
-      T2 "UPDATE PI.D.E.I                                      " \
-      T3 "Pi DYNAMIC EMU INSTALLER INFORMATION                 " \
-      T4 "Pi DYNAMIC EMU INSTALLER CRDITS                      " \
+      T2 "PI.D.E.I UPDATER                                     " \
+      T3 "PI.D.E.I INFORMATION                                 " \
+      T4 "PI.D.E.I CRDITS                                      " \
       2>&1 >/dev/tty)
     case "$choice" in
     1) install-emu "Amiga" "lr-puae" ;;
