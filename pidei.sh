@@ -13,7 +13,7 @@ function emu-menu() {
       --ok-label Install --cancel-label Exit \
       --menu "PRESS A/ENTER TO INSTALL EMU" 30 70 50 \
       + "<->CONSOLE NAME<---------------->CORE/EMU<" \
-      1 "Amiga<------------------------->RA PUAE" \
+      1 "Amiga<------------------------->RA PUAE" "NO" "amiberry" \
       2 "AmigaCD32<--------------------->RA PUAE" \
       3 "Amstrad CPC<------------------->RA CAPRICE32" \
       4 "Arcade<------------------------MULTI CORES/EMUS" \
@@ -90,7 +90,7 @@ function emu-menu() {
     1) install-emu "Amiga" "lr-puae" ;;
     2) install-emu "Amigacd32" "lr-puae" ;;
     3) install-emu "Amstradcpc" "lr-caprice32" ;;
-    4) multi-cores "Arcade" "lr-mame2003" ;;
+    4) multi-cores2 "Arcade" "lr-mame2003" "lr-fbaplha2012"  ;;
     5) install-emu "Arcadia" ;;
     6) install-emu "Astrocade" ;;
     7) install-emu "Atari800" ;;
@@ -100,15 +100,15 @@ function emu-menu() {
     11) install-emu "Atarilynx" "lr-beetle-lynx" ;;
     12) install-emu "Atarist" "lr-hatari" ;;
     13) install-emu "Atomiswave" ;;
-    14) install-emu "C64" ;;
+    14) install-emu "C64" "vice";;
     15) install-emu "Coleco" "lr-bluemsx" ;;
     16) install-emu "Dragon32" "xroar" ;;
-    17) install-emu "Daphne" "Daphne" ;;
-    18) install-emu "Dreamcast" "lr-dreamcast" "NO" "redream" ;;
+    17) install-emu "Daphne" "daphne" ;;
+    18) install-emu "Dreamcast" "lr-dreamcast" "lr-flycast" "redream" ;;
     19) install-emu "Electron" ;;
     20) install-emu "Famicon" ;;
     21) install-emu "FDS" ;;
-    22) install-emu "Game&Watch" ;;
+    22) install-emu "Game&Watch" "lr-gw" ;;
     23) multi-cores "GameBoy" "lr-mgba" "lr-gb" ;;
     24) multi-cores "GameBoy Advacnce" "lr-mgba" "NO" "NO";;
     25) install-emu "GameBoy Color" ;;
@@ -118,8 +118,8 @@ function emu-menu() {
     29) install-emu "Mastersystem" ;;
     30) install-emu "Megadrive" "lr-genesis-plus-gx" ;;
     31) install-emu "SNES" "lr-snes9x" ;;
-    32) install-emu "MSX" ;;
-    33) install-emu "MSX2" ;;
+    32) install-emu "MSX" "lr-bluemsx" "lr-fmsx" ;;
+    33) install-emu "MSX2" "lr-bluemsx" "lr-fmsx" ;;
     34) install-emu "N64" ;;
     35) install-emu "Naomi" ;;
     36) install-emu "NDS" ;;
@@ -130,7 +130,7 @@ function emu-menu() {
     41) install-emu "Oric" ;;
     42) install-emu "Pokemini" ;;
     43) install-emu "PS1" "lr-pcsx_rearmed" ;;
-    44) install-emu "PSP" "" ;;
+    44) install-emu "PSP" "NONE" "NONE" "ppsspp" ;;
     45) install-emu "Sega Model-3" "lr-snes9x" ;;
     46) install-emu "Sega Saturn" "lr-yabause" ;;
     47) install-emu "Sega Saturn Japan" "lr-snes9x" ;;
@@ -139,16 +139,16 @@ function emu-menu() {
     50) install-emu "SegaCD" "lr-picodrive" ;;
     51) install-emu "SFC" ;;
     52) install-emu "SG-1000" "lr-genesis-plus-gx" ;;
-    53) install-emu "SNES" "lr-snes9x" ;;
+    53) install-emu "SNES" "lr-snes9x" "lr-bsnes" ;;
     54) install-emu "SNES-MSU1" "lr-snes9x" ;;
     55) install-emu "SuperGrafx" "lr-beetle" ;;
     56) install-emu "TurboGrafx-16" "lr-snes9x" ;;
     57) install-emu "Vectrex" "lr-vecx" ;;
     58) install-emu "Videopac" ;;
-    59) install-emu "Virtualboy" ;;
-    60) install-emu "SVmu" ;;
+    59) install-emu "Virtualboy" "lr-bettle-vb" ;;
+    60) install-emu "ScumVMu" "scummvm" ;;
     61) install-wine ;;
-    62) install-emu "Wonderswancolor" ;;
+    62) install-emu "Wonderswancolor" "lr-bettle-wsan";;
     63) install-emu "X1" ;;
     64) install-emu "X68000" ;;
     65) install-emu "Zmachine" ;;
@@ -184,12 +184,62 @@ function multi-cores() {
         case $choice in
             1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
             2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
-            4) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
 	    +) none ;;
             *) ;;
         esac
         done < /tmp/results
 }
+
+
+function multi-cores2() {
+          whiptail --clear --title "$1 Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
+      --ok-button Install --cancel-button Back \
+                "+" "<--->RetroArch Cores<--->" off \
+                "1" ""$2" Retroarch Core" off \
+                "2" ""$3" Retroarch Core" off \
+                "3" ""$4" Retroarch Core" off \
+	        "+" "<--->Standalone Emus<--->" off \
+                "4" ""$5" Standalone Emu" off \
+                2>/tmp/results
+    while read -r choice
+        do
+        case $choice in
+            1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
+            2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" ;;
+	    +) none ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
+
+function multi-cores3() {
+          whiptail --clear --title "$1 Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
+      --ok-button Install --cancel-button Back \
+                "+" "<--->RetroArch Cores<--->" off \
+                "1" ""$2" Retroarch Core" off \
+                "2" ""$3" Retroarch Core" off \
+                "3" ""$4" Retroarch Core" off \
+                "4" ""$5" Retroarch Core" off \
+	        "+" "<--->Standalone Emus<--->" off \
+                "5" ""$6" Standalone Emu" off \
+                "6" ""$7" Standalone Emu" off \
+                 2>/tmp/results
+    while read -r choice
+        do
+        case $choice in
+            1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
+            2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" ;;
+	    +) none ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
+
 
 ##-----------------------------UnOffical Emus/Cores-----------------------------##
 
