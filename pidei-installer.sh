@@ -17,7 +17,7 @@ function pidei-install-menu() {
 
         case "$choice" in
             1) install_pidei  ;;
-            2) info_pidei     ;;
+            2) pidei-info     ;;
             *) break       ;;
         esac
     done
@@ -47,6 +47,15 @@ else
 fi
 echo "THANKS FOR INSTALLING ENJOY!!"
 sleep 5
+}
+
+function pidei-info() {
+dialog  --sleep 1 --title "PI.D.E.I INFO" --msgbox " 
+<-------------WELCOME--------------->
+WHATS THIS DO?
+- EASY INSTALL EMUS FOR RETROPIE
+- FORCE UPDATE RETROPIE SETUP
+- INSTALL MULTI CORES AT OUNCE" 0 0
 }
 
 pidei-install-menu
