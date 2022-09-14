@@ -2,7 +2,6 @@
 export NCURSES_NO_UTF8_ACS=1
 BACKTITLE="<-----Pi.D.E.I-----Pi Dynamic Emu Installer----->"
 
-
 #-----------INTRO VIDEO-----------#
 clear
 omxplayer "$HOME"/pidei/intro.mp4  > /dev/null 2>&1
@@ -11,7 +10,7 @@ function emu-menu() {
   local choice
  while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "EASY EMU INSTALLER" \
-      --ok-label Install --cancel-label Back \
+      --ok-label Install --cancel-label Exit \
       --menu "PRESS A/ENTER TO INSTALL EMU" 30 70 50 \
       + "<->CONSOLE NAME<---------------->CORE/EMU<" \
       1 "Amiga<------------------------->RA PUAE" \
@@ -67,7 +66,7 @@ function emu-menu() {
       51 "Super Famicon<---------------->CORE/EMU" \
       52 "SG-1000<---------------->CORE/EMU" \
       53 "SNES<---------------->CORE/EMU" \
-      54 "SNES MSU1<---------------->CORE/EMU" \
+      54 "SNES MSU1<---------------->CORES/EMU" \
       55 "SuperGraffiix<---------------->CORE/EMU" \
       56 "Turbo Graffix 16/PC Engine<---------------->CORE/EMU" \
       57 "Vectrex<---------------->CORE/EMU" \
@@ -86,6 +85,7 @@ function emu-menu() {
       T3 "PI.D.E.I INFORMATION                                 " \
       T4 "PI.D.E.I CRDITS                                      " \
       2>&1 >/dev/tty)
+
     case "$choice" in
     1) install-emu "Amiga" "lr-puae" ;;
     2) install-emu "Amigacd32" "lr-puae" ;;
@@ -110,7 +110,7 @@ function emu-menu() {
     21) install-emu "FDS" ;;
     22) install-emu "Game&Watch" ;;
     23) multi-cores "GameBoy" "lr-mgba" "lr-gb" ;;
-    24) install-emu "GameBoy Advacnce" "lr-mgba" ;;
+    24) multi-cores "GameBoy Advacnce" "lr-mgba" "NO" "NO";;
     25) install-emu "GameBoy Color" ;;
     26) install-emu "Game Gear" "lr-genesis-plus-gx" "CORE2" "STANDALONE-EMU" ;;
     27) install-emu "Intellivision" "lr-freeintv" ;;
@@ -152,7 +152,7 @@ function emu-menu() {
     63) install-emu "X1" ;;
     64) install-emu "X68000" ;;
     65) install-emu "Zmachine" ;;
-    66) install-emu "ZXspectrum" ;; 
+    66) install-emu "ZXspectrum" ;;
      +) none  ;;
     T1) update-setup-script ;;
     T2) update-pidei ;;
@@ -168,8 +168,10 @@ function install-emu() {
 cd $HOME/RetroPie-Setup
 sudo ./retropie_packages.sh "$2"
 }
+
+
 function multi-cores() {
-          whiptail --clear --title ""$1" Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
+          whiptail --clear --title "$1 Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
       --ok-button Install --cancel-button Back \
                 "+" "<--->RetroArch Cores<--->" off \
                 "1" ""$2" Retroarch Core" off \
@@ -177,7 +179,7 @@ function multi-cores() {
 		"+" "<--->Standalone Emus<--->" off \
                 "3" ""$4" Standalone Emu" off \
                 2>/tmp/results
-    while read -r choice  
+    while read -r choice
         do
         case $choice in
             1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
@@ -192,9 +194,9 @@ function multi-cores() {
 ##-----------------------------UnOffical Emus/Cores-----------------------------##
 
 function install-wine() {
-dialog  --sleep 1 --title "WINE EMU INFO" --msgbox " 
+dialog  --sleep 1 --title "WINE EMU INFO" --msgbox "
 <-------------WELCOME--------------->
-PI.D.E.I WILL NOW INSTALL WINE/BOX86
+PI.D.E.I. WILL NOW INSTALL WINE/BOX86
 <-------------CREDITS--------------->
 - SUPREME TEAM
 - RETRO DEVILS
@@ -225,7 +227,7 @@ curl -sSL https://bit.ly/Install-PI-DEI | bash
 
 
 function pidei-info() {
-dialog  --sleep 1 --title "PI.D.E.I INFO" --msgbox " 
+dialog  --sleep 1 --title "PI.D.E.I INFO" --msgbox "
 <-------------WELCOME--------------->
 WHATS THIS DO?
 - EASY INSTALL EMUS FOR RETROPIE
@@ -237,10 +239,10 @@ WHATS THIS DO?
 }
 
 function pidei-credits() {
-dialog  --sleep 1 --title "PI.D.E.I CREDITS" --msgbox " 
+dialog  --sleep 1 --title "PI.D.E.I CREDITS" --msgbox "
 <-------------CREDITS--------------->
-- ALL THE DEVILS 
-- RETROPIE OFFICAL 
+- ALL THE DEVILS
+- RETROPIE OFFICAL
 - CREDITS FOR EACH EMU WITH EMU INFO" 0 0
 }
 
