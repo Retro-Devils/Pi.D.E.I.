@@ -15,7 +15,8 @@
 <-------------------------------------------------------------------------------------------------------->
 
 # Offical Emus Supported 
-- All emus in Offical Retropie Setup can be installed through Pi.D.E.I
+- All emus in Offical Retropie Setup can be installed through Pi.D.E.I 
+If missing please put in a issue on here or report wherever
 
 
 # Unoffical Emus Supported 
