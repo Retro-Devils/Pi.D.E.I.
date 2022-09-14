@@ -243,4 +243,5 @@ dialog  --sleep 1 --title "PI.D.E.I CREDITS" --msgbox "
 - RETROPIE OFFICAL 
 - CREDITS FOR EACH EMU WITH EMU INFO" 0 0
 }
+
 emu-menu
