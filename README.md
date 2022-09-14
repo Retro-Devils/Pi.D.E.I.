@@ -30,7 +30,7 @@
 
 # Installation
 - Press f4 in Retropie. Or open a terminal
-- Type curl -sSL PLACEHOLDER/... | bash
+- Type curl -sSL https://bit.ly/Install-PI-DEI | bash
 - Press the install button in user interface
 
 <-------------------------------------------------------------------------------------------------------->
