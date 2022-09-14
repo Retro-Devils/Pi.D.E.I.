@@ -13,7 +13,7 @@ function emu-menu() {
       --ok-label Select --cancel-label Exit \
       --menu "PRESS A/ENTER TO INSTALL EMU" 30 70 50 \
       + "<->CONSOLE NAME<---------------->CORE/EMU<" \
-      1 "Amiga<------------------------->MULTI CORES/EMUS \
+      1 "Amiga<------------------------->MULTI CORES/EMUS" \
       2 "AmigaCD32<--------------------->RA PUAE" \
       3 "Amstrad CPC<------------------->RA CAPRICE32" \
       4 "Arcade<------------------------MULTI CORES/EMUS" \
