@@ -10,7 +10,7 @@ function emu-menu() {
   local choice
  while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "EASY EMU INSTALLER" \
-      --ok-label Install --cancel-label Exit \
+      --ok-label Select --cancel-label Exit \
       --menu "PRESS A/ENTER TO INSTALL EMU" 30 70 50 \
       + "<->CONSOLE NAME<---------------->CORE/EMU<" \
       1 "Amiga<------------------------->MULTI CORES/EMUS \
