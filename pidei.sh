@@ -219,7 +219,7 @@ cd /home/pi/RetroPie-Setup
 git checkout .; git reset --hard HEAD; git pull
 }
 
-function update-pedei() {
+function update-pidei() {
 curl -sSL https://bit.ly/Install-PI-DEI | bash
 }
 
