@@ -234,6 +234,8 @@ function multi-cores3() {
             2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
             3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
             3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$6" ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$7" ;;
 	    +) none ;;
             *) ;;
         esac
@@ -267,6 +269,11 @@ https://raw.githubusercontent.com/Retro-Devils/Sega-Model-3-PI-4/main/SM3-INSTAL
 ###-----------------------------PI.D.E.I TOOLS-----------------------------###
 
 function update-setup-script() {
+dialog  --sleep 1 --title "UPDATE RPI SETUP" --msgbox "
+<------------------ATTENTION------------------->
+Pi D.E.I WILL NOW FORCE UPDATE RETROPIE SETUP
+IF YOU WANT TO CANCEL PLEASE PRES CONTROL+C NOW
+<---------------------------------------------->" 0 0
 cd /home/pi/RetroPie-Setup
 git checkout .; git reset --hard HEAD; git pull
 }
