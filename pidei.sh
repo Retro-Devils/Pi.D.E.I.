@@ -72,7 +72,7 @@ function emu-menu() {
       57 "Vectrex<---------------->CORE/EMU" \
       58 "VideoPAC<---------------->CORE/EMU" \
       59 "Virtual Boy<---------------->CORE/EMU" \
-      60 "Dreamcast VMU<---------------->CORE/EMU" \
+      60 "VMU Dreamcast<---------------->CORE/EMU" \
       61 "Wine<---------------->Wine/Box86" \
       62 "Wonderswan Color<---------------->CORE/EMU" \
       63 "Sharp X1<---------------->CORE/EMU" \
