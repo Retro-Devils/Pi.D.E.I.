@@ -279,7 +279,7 @@ git checkout .; git reset --hard HEAD; git pull
 }
 
 function update-pidei() {
-curl -sSL https://bit.ly/Install-PI-DEI | bash
+curl -sSL bit.ly/Install-PI-DEI | bash
 }
 
 
