@@ -162,13 +162,13 @@ function emu-menu() {
     esac
    done
 }
+
 ##-----------------------------Offical Cores & Emus-----------------------------##
 
 function install-emu() {
 cd $HOME/RetroPie-Setup
 sudo ./retropie_packages.sh "$2" install_bin
 }
-
 
 function multi-cores() {
           whiptail --clear --title "$1 Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
@@ -190,7 +190,6 @@ function multi-cores() {
         esac
         done < /tmp/results
 }
-
 
 function multi-cores2() {
           whiptail --clear --title "$1 Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
