@@ -46,6 +46,7 @@ else
 	cat $HOME/temp > $HOME/RetroPie/retropiemenu/gamelist.xml
 	rm -f $HOME/temp
 fi
+sleep 1
 echo "THANKS FOR INSTALLING ENJOY!!"
 sleep 5
 }
