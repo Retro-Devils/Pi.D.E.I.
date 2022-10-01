@@ -207,7 +207,7 @@ function multi-cores2() {
             1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" install_bin ;;
             2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" install_bin ;;
             3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" install_bin ;;
-            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" install_bin ;;
+            4) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" install_bin ;;
 	    +) none ;;
             *) ;;
         esac
