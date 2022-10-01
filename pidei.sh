@@ -232,9 +232,9 @@ function multi-cores3() {
             1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" install_bin ;;
             2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" install_bin ;;
             3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" install_bin ;;
-            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" install_bin ;;
-            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$6" install_bin ;;
-            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$7" install_bin ;;
+            4) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" install_bin ;;
+            5) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$6" install_bin ;;
+            6) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$7" install_bin ;;
 	    +) none ;;
             *) ;;
         esac
