@@ -300,6 +300,8 @@ else
 	cat $HOME/temp > $HOME/RetroPie/retropiemenu/gamelist.xml
 	rm -f $HOME/temp
 fi
+bash "$HOME/RetroPie/retropiemenu/pidei.sh"
+exit 1
 }
 
 
