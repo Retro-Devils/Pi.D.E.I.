@@ -8,7 +8,7 @@ omxplayer "$HOME"/pidei/intro.mp4  > /dev/null 2>&1
 
 function emu-menu() {
   local choice
- while true; do
+  while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "EASY EMU INSTALLER" \
       --ok-label Select --cancel-label Exit \
       --menu "PRESS A/ENTER TO INSTALL EMU" 30 70 50 \
