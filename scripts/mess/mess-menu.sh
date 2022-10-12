@@ -25,7 +25,7 @@ fi
 function installed() {
 dialog  --sleep 1 --title "WARNING" --msgbox "
 PI DEI WILL NOW THINK MESS IS INSTALLED " 0 0
-wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/mess-confirm.sh -P $HOME/pidei/scripts/
+wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/mess/mess-confirm.sh -P $HOME/pidei/scripts/
 }
 
 function not-installed() {
@@ -38,9 +38,9 @@ sudo ./retropie_packages.sh mame
 sleep 2
 cd
 sleep 1
-wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/mess-confirm.sh -P $HOME/pidei/scripts/
+wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/mess-mess-confirm.sh -P $HOME/pidei/scripts/
 sudo cp /opt/retropie/libretrocores/lr-mess/mamemess_libretro.so -P /opt/retropie/libretrocores/lr-mess/mess_libretro.so
-wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/run-mes.sh -P $HOME/RetroPie-Setup/scriptmodules/
+wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/mess/run-mes.sh -P $HOME/RetroPie-Setup/scriptmodules/
 }
 
 mess-menu
