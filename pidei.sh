@@ -298,10 +298,12 @@ wget https://github.com/Retro-Devils/Pi.D.E.I./raw/main/intro.mp4 -P "$HOME"/pid
 wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei.sh -P "$HOME"/pidei/
 wget https://github.com/Retro-Devils/Pi.D.E.I./raw/main/pi-dei-logo.png -P "$HOME"/pidei/
 sudo wget -O "/usr/local/bin/pidei" https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei.sh
+wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/mess-menu.sh -P $HOME/pidei/scripts/
 cp "$HOME"/pidei/pidei.sh -f "$HOME"/RetroPie/retropiemenu/
 cp "$HOME"/pidei/pi-dei-logo.png -f "$HOME"/RetroPie/retropiemenu/icons/
 sudo chmod 755 /usr/local/bin/pidei
 chmod 755 "$HOME"/RetroPie/retropiemenu/pidei.sh
+chmod 755 -R"$HOME"/pidei/
 sleep 2
 if [ ! -s "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then sudo rm -f $HOME/RetroPie/retropiemenu/gamelist.xml; fi
 if [ ! -f "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml $HOME/RetroPie/retropiemenu/gamelist.xml; fi
