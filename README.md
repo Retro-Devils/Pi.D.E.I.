@@ -23,6 +23,15 @@ If missing please put in a issue on here or report wherever
 - Model 3
 - Wine
 - SNES MSU1
+- BBC (coming soon)
+
+# MESS/MAME Systems Supported (coming soon next update)
+- Archemedes 
+- 
+-
+-
+- PlugNPlay (Jakks)
+-
 
 # Experimental Unoffical Emus Supported 
 - None Currently 
