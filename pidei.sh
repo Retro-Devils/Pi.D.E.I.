@@ -12,9 +12,9 @@ function emu-menu() {
     choice=$(dialog --backtitle "$BACKTITLE" --title "PI DYNAMIC EMU INSTALLER" \
       --ok-label Install --cancel-label Exit \
       --menu "PRESS A/ENTER TO INSTALL EMU" 40 60 40 \
-      + "<------------------------------------------>" \
-      + "<-->CONSOLE NAME<-------------->CORE/EMU<-->" \
-      + "<------------------------------------------>" \
+      + "<                                         >" \
+      + "<-->CONSOLE NAME<------------->CORE/EMU<-->" \
+      + "<                                         >" \
       1 "Amiga<------------------------>MULTI CORES/EMUS" \
       2 "AmigaCD32<-------------------->RA PUAE" \
       3 "Amstrad CPC<------------------>RA CAPRICE32" \
