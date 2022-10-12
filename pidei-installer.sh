@@ -30,7 +30,7 @@ if [ -f "/usr/local/bin/pidei" ]; then sudo rm /usr/local/bin/pidei; fi
 wget https://github.com/Retro-Devils/Pi.D.E.I./raw/main/intro.mp4 -P "$HOME"/pidei/
 wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei.sh -P "$HOME"/pidei/
 wget https://github.com/Retro-Devils/Pi.D.E.I./raw/main/pi-dei-logo.png -P "$HOME"/pidei/
-wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/mess-menu.sh -P $HOME/pidei/scripts/
+wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/mess/mess-menu.sh -P $HOME/pidei/scripts/
 sudo wget -O "/usr/local/bin/pidei" https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei.sh
 cp "$HOME"/pidei/pidei.sh -f "$HOME"/RetroPie/retropiemenu/
 cp "$HOME"/pidei/pi-dei-logo.png -f "$HOME"/RetroPie/retropiemenu/icons/
