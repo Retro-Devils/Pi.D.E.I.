@@ -10,9 +10,11 @@ function emu-menu() {
   local choice
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PI DYNAMIC EMU INSTALLER" \
-      --ok-label Select --cancel-label Exit \
+      --ok-label Install --cancel-label Exit \
       --menu "PRESS A/ENTER TO INSTALL EMU" 40 60 40 \
-      + "<->CONSOLE NAME<-------------->CORE/EMU<" \
+      + "<------------------------------------------>" \
+      + "<-->CONSOLE NAME<-------------->CORE/EMU<-->" \
+      + "<------------------------------------------>" \
       1 "Amiga<------------------------>MULTI CORES/EMUS" \
       2 "AmigaCD32<-------------------->RA PUAE" \
       3 "Amstrad CPC<------------------>RA CAPRICE32" \
@@ -32,25 +34,25 @@ function emu-menu() {
       17 "Daphne<----------------------->DAPHNE" \
       18 "Dreamcast<-------------------->MULTI CORES/EMUS" \
       19 "Electron<--------------------->" \
-      20 "Famicon<------------------------->" \
-      21 "Famicom Disk<-------------------->" \
-      22 "Game and Watch<------------------>" \
-      23 "Gameboy<------------------------->MULTI CORES/EMUS" \
-      24 "Gameboy Advance<----------------->MULTI CORES/EMUS" \
-      25 "Gameboy Color<------------------->MULTI CORES/EMUS" \
-      26 "Gamegear<------------------------>MULTI CORES/EMUS" \
-      27 "Intellivision<------------------->RA FREEINTV" \
-      28 "MarkIII<------------------------->" \
-      29 "Mastersystem<-------------------->" \
-      30 "Genesis/Megadrive<--------------->" \
-      31 "Genesis/Megadrive-Japan<--------->" \
-      32 "MSX<----------------------------->" \
-      33 "MSX 2<--------------------------->" \
-      34 "Nintendo 64<--------------------->" \
-      35 "Naomi<--------------------------->" \
-      36 "Nintendo DS<--------------------->" \
-      37 "NeoGeo<-------------------------->" \
-      38 "Neo Geo Pocket Color<------------>" \
+      20 "Famicon<---------------------->" \
+      21 "Famicom Disk<----------------->" \
+      22 "Game and Watch<--------------->" \
+      23 "Gameboy<---------------------->MULTI CORES/EMUS" \
+      24 "Gameboy Advance<-------------->MULTI CORES/EMUS" \
+      25 "Gameboy Color<---------------->MULTI CORES/EMUS" \
+      26 "Gamegear<--------------------->MULTI CORES/EMUS" \
+      27 "Intellivision<---------------->RA FREEINTV" \
+      28 "MarkIII<---------------------->" \
+      29 "Mastersystem<----------------->" \
+      30 "Genesis/Megadrive<------------>" \
+      31 "Genesis/Megadrive-Japan<------>" \
+      32 "MSX<-------------------------->" \
+      33 "MSX 2<------------------------>" \
+      34 "Nintendo 64<------------------>" \
+      35 "Naomi<------------------------>" \
+      36 "Nintendo DS<------------------>" \
+      37 "NeoGeo<----------------------->" \
+      38 "Neo Geo Pocket Color<--------->" \
       39 "NES<----------------------------->" \
       40 "Openbor<------------------------->" \
       41 "Oric<---------------------------->" \
