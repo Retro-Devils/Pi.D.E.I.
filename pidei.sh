@@ -249,7 +249,7 @@ wget -m -r -np -nH -nd -R "index.html" https://raw.githubusercontent.com/Retro-D
 sleep 2 
 cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh lr-mess-"$1"
 else
-bash $HOME/pidei/mess-menu.sh
+bash $HOME/pidei/scripts/mess-menu.sh
 fi
 }
 
