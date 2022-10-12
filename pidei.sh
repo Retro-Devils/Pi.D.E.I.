@@ -84,7 +84,7 @@ function emu-menu() {
       T1 "FORCE RETROPIE SETUP SCRIPT UPDATE                   " \
       T2 "PI.D.E.I UPDATER                                     " \
       T3 "PI.D.E.I INFORMATION                                 " \
-      T4 "PI.D.E.I CRDITS                                      " \
+      T4 "PI.D.E.I CREDITS                                      " \
       2>&1 >/dev/tty)
 
     case "$choice" in
