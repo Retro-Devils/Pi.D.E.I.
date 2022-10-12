@@ -2,7 +2,6 @@
 export NCURSES_NO_UTF8_ACS=1
 BACKTITLE="<-----Pi.D.E.I-----Pi Dynamic Emu Installer----->"
 
-DEVILS-EXTRAS="https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/libretrocores/"
 #-----------INTRO VIDEO-----------#
 clear
 omxplayer "$HOME"/pidei/intro.mp4  > /dev/null 2>&1
@@ -245,8 +244,8 @@ function multi-cores3() {
 }
 
 function mess-system() {
-if [ ! -f $HOME/pidei/mess-confirm.sh ]; then
-wget -m -r -np -nH -nd -R "index.html" "${DEVILS-EXTRAS}"/"${1}".sh -P "$HOME"/RetroPie-Setup/scriptmodules/libretrocores/ -erobots=off
+if [ ! -f "$HOME"/pidei/mess-confirm.sh ]; then
+wget -m -r -np -nH -nd -R "index.html" https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/libretrocores//"${1}".sh -P "$HOME"/RetroPie-Setup/scriptmodules/libretrocores/ -erobots=off
 sleep 2 
 cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$1"
 else
