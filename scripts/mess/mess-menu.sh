@@ -3,7 +3,6 @@ function mess-menu() {
 if [ -f $HOME/pidei/scripts/mess-confirm.sh ]; then
 dialog  --sleep 1 --title "MESS/MAME INSTALLED" --msgbox "
 MESS & MAME ARE ALREADY INSTALLED !!" 0 0
-bash $HOME/pidei/pidei.sh 
 else
     local choice
     while true; do
