@@ -1,6 +1,6 @@
 #!/bin/bash
 function mess-menu() {
-if [ ! -f $HOME/pidei/scripts/mess-confirm.sh ]; then
+if [ -f $HOME/pidei/scripts/mess-confirm.sh ]; then
 dialog  --sleep 1 --title "MESS/MAME INSTALLED" --msgbox "
 MESS & MAME ARE ALREADY INSTALLED !!" 0 0
 bash $HOME/pidei/pidei.sh 
@@ -23,7 +23,6 @@ fi
 }
 
 function installed() {
-bash $HOME/pidei/pidei.sh
 dialog  --sleep 1 --title "WARNING" --msgbox "
 PI DEI WILL NOW THINK MESS IS INSTALLED " 0 0
 wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/mess-confirm.sh -P $HOME/pidei/scripts/
