@@ -1,7 +1,8 @@
 # Pi Dynamic Emu Installer (Pi.D.E.I)
 - A unoffical emu installer for Retropie. 
-- Last Update 9/12/22
-- Version 1.00
+- Last Update: 10/12/22
+- Version #: 1.01
+- System Count: 67
 
 <-------------------------------------------------------------------------------------------------------->
 
@@ -27,11 +28,11 @@ If missing please put in a issue on here or report wherever
 
 # MESS/MAME Systems Supported (coming soon next update)
 - Archemedes 
-- 
--
--
+- coming soon
+- coming soon
+- coming soon 
 - PlugNPlay (Jakks)
--
+- coming soon
 
 # Experimental Unoffical Emus Supported 
 - None Currently 
