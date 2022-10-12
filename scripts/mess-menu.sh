@@ -34,9 +34,11 @@ sudo ./retropie_packages.sh lr-mame
 sleep 2
 sudo ./retropie_packages.sh mame
 sleep 2
-wget mess-confirm.sh -P $HOME/pidei/
+cd
+sleep 1
+wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/mess-confirm.sh -P $HOME/pidei/
 sudo cp /opt/retropie/libretrocores/lr-mess/mamemess_libretro.so -P /opt/retropie/libretrocores/lr-mess/mess_libretro.so
-wget run-mes.sh -P $HOME/RetroPie-Setup/scriptmodules/
+wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/run-mes.sh -P $HOME/RetroPie-Setup/scriptmodules/
 }
 
 mess-menu
