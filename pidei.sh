@@ -25,68 +25,70 @@ function emu-menu() {
       8 "Atari2600<-------------------->RA STELLA" \
       9 "Atari5200<-------------------->RA ATARI800" \
       10 "Atari7800<------------------->RA PROSYSTEM" \
-      11 "AtariLynx<-------------------->RA BEETLE LYNX" \
-      12 "AtariST<----------------------> RA HATARI" \
-      13 "Atomiswave<------------------->" \
-      14 "Commadore64<------------------>" \
-      15 "Colecovision<----------------->RA BLUEMSX" \
-      16 "Dragon32<--------------------->SA XROAR" \
-      17 "Daphne<----------------------->DAPHNE" \
-      18 "Dreamcast<-------------------->MULTI CORES/EMUS" \
-      19 "Electron<--------------------->" \
-      20 "Famicon<---------------------->" \
-      21 "Famicom Disk<----------------->" \
-      22 "Game and Watch<--------------->" \
-      23 "Gameboy<---------------------->MULTI CORES/EMUS" \
-      24 "Gameboy Advance<-------------->MULTI CORES/EMUS" \
-      25 "Gameboy Color<---------------->MULTI CORES/EMUS" \
-      26 "Gamegear<--------------------->MULTI CORES/EMUS" \
-      27 "Intellivision<---------------->RA FREEINTV" \
-      28 "MarkIII<---------------------->" \
-      29 "Mastersystem<----------------->" \
-      30 "Genesis/Megadrive<------------>" \
-      31 "Genesis/Megadrive-Japan<------>" \
-      32 "MSX<-------------------------->" \
-      33 "MSX 2<------------------------>" \
-      34 "Nintendo 64<------------------>" \
-      35 "Naomi<------------------------>" \
-      36 "Nintendo DS<------------------>" \
-      37 "NeoGeo<----------------------->" \
-      38 "Neo Geo Pocket Color<--------->" \
-      39 "NES<----------------------------->" \
-      40 "Openbor<------------------------->" \
-      41 "Oric<---------------------------->" \
-      42 "Pokemini<------------------------>" \
-      43 "PlayStation 1<------------------->" \
-      44 "Plug N Play<--------------------->MESS System" \
-      45 "PSP<----------------------------->" \
-      46 "Sega Model 3<-------------------->CORE/EMU" \
-      47 "Sega Saturn<--------------------->CORE/EMU" \
-      48 "Sega Saturn Japan<--------------->CORE/EMU" \
-      49 "ScummVM<------------------------->CORE/EMU" \
-      50 "Sega32x<------------------------->CORE/EMU" \
-      51 "SegaCD<-------------------------->CORE/EMU" \
-      52 "Super Famicon<------------------->CORE/EMU" \
-      53 "SG-1000<------------------------->CORE/EMU" \
-      54 "SNES<---------------------------->CORE/EMU" \
-      55 "SNES MSU1<----------------------->CORES/EMU" \
-      56 "SuperGraffiix<------------------->CORE/EMU" \
-      57 "Turbo Graffix 16/PC Engine<------>CORE/EMU" \
-      58 "Vectrex<------------------------->CORE/EMU" \
-      59 "VideoPAC<------------------------>CORE/EMU" \
-      60 "Virtual Boy<--------------------->CORE/EMU" \
-      61 "VMU Dreamcast<------------------->CORE/EMU" \
-      62 "Wine<---------------------------->Wine/Box86" \
-      63 "Wonderswan Color<---------------->CORE/EMU" \
-      64 "Sharp X1<------------------------>CORE/EMU" \
-      65 "Sharp X68000<-------------------->CORE/EMU" \
-      66 "ZMachine<------------------------>CORE/EMU" \
-      67 "ZXSpectrum<---------------------->CORE/EMU" \
-       + "<----------------Pi.D.E.I Tools--------------------->" \
-      T1 "FORCE RETROPIE SETUP SCRIPT UPDATE                   " \
-      T2 "PI.D.E.I UPDATER                                     " \
-      T3 "PI.D.E.I INFORMATION                                 " \
-      T4 "PI.D.E.I CREDITS                                      " \
+      11 "AtariLynx<------------------->RA BEETLE LYNX" \
+      12 "AtariST<---------------------> RA HATARI" \
+      13 "Atomiswave<------------------>" \
+      14 "Commadore64<----------------->" \
+      15 "Colecovision<---------------->RA BLUEMSX" \
+      16 "Dragon32<-------------------->SA XROAR" \
+      17 "Daphne<---------------------->DAPHNE" \
+      18 "Dreamcast<------------------->MULTI CORES/EMUS" \
+      19 "Electron<-------------------->" \
+      20 "Famicon<--------------------->" \
+      21 "Famicom Disk<---------------->" \
+      22 "Game and Watch<-------------->" \
+      23 "Gameboy<--------------------->MULTI CORES/EMUS" \
+      24 "Gameboy Advance<------------->MULTI CORES/EMUS" \
+      25 "Gameboy Color<--------------->MULTI CORES/EMUS" \
+      26 "Gamegear<-------------------->MULTI CORES/EMUS" \
+      27 "Intellivision<--------------->RA FREEINTV" \
+      28 "MarkIII<--------------------->" \
+      29 "Mastersystem<---------------->" \
+      30 "Genesis/Megadrive<----------->" \
+      31 "Genesis/Megadrive-Japan<----->" \
+      32 "MSX<------------------------->" \
+      33 "MSX 2<----------------------->" \
+      34 "Nintendo 64<----------------->" \
+      35 "Naomi<----------------------->" \
+      36 "Nintendo DS<----------------->" \
+      37 "NeoGeo<---------------------->" \
+      38 "Neo Geo Pocket Color<-------->" \
+      39 "NES<------------------------->" \
+      40 "Openbor<--------------------->" \
+      41 "Oric<------------------------>" \
+      42 "Pokemini<-------------------->" \
+      43 "PlayStation 1<--------------->" \
+      44 "Plug N Play<----------------->MESS System" \
+      45 "PSP<-------------------------->" \
+      46 "Sega Model 3<----------------->CORE/EMU" \
+      47 "Sega Saturn<------------------>CORE/EMU" \
+      48 "Sega Saturn Japan<------------>CORE/EMU" \
+      49 "ScummVM<---------------------->CORE/EMU" \
+      50 "Sega32x<---------------------->CORE/EMU" \
+      51 "SegaCD<----------------------->CORE/EMU" \
+      52 "Super Famicon<---------------->CORE/EMU" \
+      53 "SG-1000<---------------------->CORE/EMU" \
+      54 "SNES<------------------------->CORE/EMU" \
+      55 "SNES MSU1<-------------------->CORES/EMU" \
+      56 "SuperGraffiix<---------------->CORE/EMU" \
+      57 "Turbo Graffix 16/PC Engine<--->CORE/EMU" \
+      58 "Vectrex<---------------------->CORE/EMU" \
+      59 "VideoPAC<--------------------->CORE/EMU" \
+      60 "Virtual Boy<------------------>CORE/EMU" \
+      61 "VMU Dreamcast<---------------->CORE/EMU" \
+      62 "Wine<------------------------->Wine/Box86" \
+      63 "Wonderswan Color<------------->CORE/EMU" \
+      64 "Sharp X1<--------------------->CORE/EMU" \
+      65 "Sharp X68000<----------------->CORE/EMU" \
+      66 "ZMachine<--------------------->CORE/EMU" \
+      67 "ZXSpectrum<------------------->CORE/EMU" \
+       + "<                                     >" \
+       + "<-----------Pi.D.E.I Tools------------>" \
+       + "<                                     >" \
+      T1 "FORCE RETROPIE SETUP SCRIPT UPDATE     " \
+      T2 "PI.D.E.I UPDATER                       " \
+      T3 "PI.D.E.I INFORMATION                   " \
+      T4 "PI.D.E.I CREDITS                       " \
       2>&1 >/dev/tty)
 
     case "$choice" in
