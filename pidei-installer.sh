@@ -18,17 +18,6 @@ function pidei-install-menu() {
             --menu "Pi.D.E.I INSTALLER" 25 40 40 \
             1 "Install/Update Pi.D.E.I. " \
             2 "Pi.D.E.I Information   " \
-	    + "''${fgred}'          .    .      '
-''${fgred}'          |\   |\     '
-''${fgred}'       _..;|;__;|;    '
-''${fgred}'     ,`   `;` \`;`-.  '
-''${fgred}'     7;-..     :    ) '
-''${fgred}'.--._)|   `;==,|,==`  '
-''${fgred}' `\`@; \_ `<`'${bfgylw}'G'${fgred}',\"\ '${bfgylw}'G'${fgred}').'
-''${fgred}'   `\/-;,(  )  .>. )  '
-''${fgred}'       < ,-;`-.__.;`  '
-''${fgred}'        `\_ `-,__,`   '
-''${fgred}'           `-..,;,>   '" \
             2>&1 > /dev/tty)
 
         case "$choice" in
