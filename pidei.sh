@@ -131,7 +131,7 @@ function emu-menu() {
     41) install-emu "Oric" ;;
     42) install-emu "Pokemini" "pokemini" ;;
     43) install-emu "PS1" "lr-pcsx_rearmed" ;;
-    44) mess-system "lr-plugnplay" ;;
+    44) mess-system "plugnplay" ;;
     45) multi-cores "PSP" "lr-ppsspp" "NONE" "ppsspp" ;;
     46) install-emu "Sega Model-3" "lr-snes9x" ;;
     47) install-emu "Sega Saturn" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
@@ -245,9 +245,9 @@ function multi-cores3() {
 
 function mess-system() {
 if [ -f "$HOME"/pidei/mess-confirm.sh ]; then
-wget -m -r -np -nH -nd -R "index.html" https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/libretrocores/"${1}".sh -P "$HOME"/RetroPie-Setup/scriptmodules/libretrocores/ -erobots=off
+wget -m -r -np -nH -nd -R "index.html" https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/libretrocores/lr-mess-"${1}".sh -P "$HOME"/RetroPie-Setup/scriptmodules/libretrocores/ -erobots=off
 sleep 2 
-cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$1"
+cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh lr-mess-"$1"
 else
 bash $HOME/pidei/mess-menu.sh
 fi
