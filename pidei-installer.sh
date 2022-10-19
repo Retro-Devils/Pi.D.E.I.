@@ -30,7 +30,7 @@ if [ -d "$HOME/pidei/" ]; then sudo rm -R "$HOME"/pidei/; fi
 if [ -f "$HOME/RetroPie/retropiemenu/pidei.sh" ]; then sudo rm "$HOME"/RetroPie/retropiemenu/pidei.sh; fi
 if [ -f "/usr/local/bin/pidei" ]; then sudo rm /usr/local/bin/pidei; fi
 cd $HOME
-git clone https://github.com/Retro-Devils/Pi.D.E.I
+git clone https://github.com/Retro-Devils/Pi.D.E.I.
 sudo wget -O "/usr/local/bin/pidei" https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei.sh
 cp "$HOME"/pidei/pidei.sh -f "$HOME"/RetroPie/retropiemenu/
 cp "$HOME"/pidei/pi-dei-logo.png -f "$HOME"/RetroPie/retropiemenu/icons/
