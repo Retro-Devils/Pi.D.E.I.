@@ -2,10 +2,6 @@
 
 export NCURSES_NO_UTF8_ACS=1
 
-local rst="$(tput sgr0)"
-fgred="${rst}$(tput setaf 1)" # Red
-bfgylw="${bld}$(tput setaf 3)"
-
 ###----------------------------###
 ### INSTALLER MENU FUNCTIONS   ###
 ###----------------------------###
