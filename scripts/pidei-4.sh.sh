@@ -281,10 +281,17 @@ fi
 }
 
 
+
+function install-actionmax() {
+wget -m -r -np -nH -nd -R "index.html" https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/emulators/actionmax.sh -P $HOME/RetroPie-Setup/scriptmodules/emulators/ -erobots=off
+sleep 2
+cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh actionmax
+}
+
 function install-openbor() {
 wget -m -r -np -nH -nd -R "index.html" https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/emulators/openbor-extra.sh -P $HOME/RetroPie-Setup/scriptmodules/emulators/ -erobots=off
 sleep 2
-cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh openbor-extra install_bin
+cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh openbor-extra
 }
 
 function install-model-3() {
