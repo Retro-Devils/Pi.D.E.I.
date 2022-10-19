@@ -15,27 +15,26 @@ function emu-menu() {
       + "<                                         >" \
       + "<-->CONSOLE NAME<------------->CORE/EMU<-->" \
       + "<                                         >" \
-      6 "Astrocade<-------------------->" \
-      7 "Atari800<--------------------->RA ATARI800"\
-      8 "Atari2600<-------------------->RA STELLA" \
-      19 "Electron<-------------------->" \
-      20 "Famicon<--------------------->" \
-      21 "Famicom Disk<---------------->" \
-      22 "Game and Watch<-------------->" \
-      23 "Gameboy<--------------------->MULTI CORES/EMUS" \
-      24 "Gameboy Advance<------------->MULTI CORES/EMUS" \
-      25 "Gameboy Color<--------------->MULTI CORES/EMUS" \
-      26 "Gamegear<-------------------->MULTI CORES/EMUS" \
-      30 "Genesis/Megadrive<----------->" \
-      31 "Genesis/Megadrive-Japan<----->" \
-      39 "NES<------------------------->" \
-      42 "Pokemini<-------------------->" \
-      50 "Sega32x<---------------------->CORE/EMU" \
-      51 "SegaCD<----------------------->CORE/EMU" \
-      52 "Super Famicon<---------------->CORE/EMU" \
-      53 "SG-1000<---------------------->CORE/EMU" \
-      54 "SNES<------------------------->CORE/EMU" \
-      55 "SNES MSU1<-------------------->CORES/EMU" \
+      1 "Astrocade<-------------------->" \
+      2 "Atari800<--------------------->RA ATARI800"\
+      3 "Atari2600<-------------------->RA STELLA" \
+      4 "Electron<-------------------->" \
+      5 "Famicon<--------------------->" \
+      6 "Famicom Disk<---------------->" \
+      7 "Game and Watch<-------------->" \
+      8 "Gameboy<--------------------->MULTI CORES/EMUS" \
+      9 "Gameboy Advance<------------->MULTI CORES/EMUS" \
+      10 "Gameboy Color<--------------->MULTI CORES/EMUS" \
+      11 "Gamegear<-------------------->MULTI CORES/EMUS" \
+      12 "Genesis/Megadrive<----------->" \
+      13 "NES<------------------------->" \
+      14 "Pokemini<-------------------->" \
+      15 "Sega32x<---------------------->CORE/EMU" \
+      16 "SegaCD<----------------------->CORE/EMU" \
+      17 "Super Famicon<---------------->CORE/EMU" \
+      18 "SG-1000<---------------------->CORE/EMU" \
+      19 "SNES<------------------------->CORE/EMU" \
+      20 "SNES MSU1<-------------------->CORES/EMU" \
        + "<                                     >" \
        + "<-----------Pi.D.E.I Tools------------>" \
        + "<                                     >" \
@@ -46,74 +45,26 @@ function emu-menu() {
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) install-emu "Amiga" "lr-puae" ;;
-    2) install-emu "Amigacd32" "lr-puae" ;;
-    3) install-emu "Amstradcpc" "lr-caprice32" ;;
-    4) multi-cores3 "Arcade" "lr-mame2003" "lr-fbaplha2012" "lr-mame200" "lr-mame2003-plus" "mame" ;;
-    5) install-emu "Arcadia" ;;
-    6) install-emu "Astrocade" ;;
-    7) install-emu "Atari800" ;;
-    8) install-emu "Atari2600" "lr-stella" ;;
-    9) install-emu "Atari5200" "lr-atari800";;
-    10) install-emu "Atari7800" "lr-prosystem";;
-    11) install-emu "Atarilynx" "lr-beetle-lynx" ;;
-    12) install-emu "Atarist" "lr-hatari" ;;
-    13) install-emu "Atomiswave" ;;
-    14) install-emu "C64" "vice";;
-    15) install-emu "Coleco" "lr-bluemsx" ;;
-    16) install-emu "Dragon32" "xroar" ;;
-    17) install-emu "Daphne" "daphne" ;;
-    18) install-emu "Dreamcast" "lr-dreamcast" "lr-flycast" "redream" ;;
-    19) install-emu "Electron" ;;
-    20) install-emu "Famicon" ;;
-    21) install-emu "FDS" ;;
-    22) install-emu "Game&Watch" "lr-gw" ;;
-    23) multi-cores "GameBoy" "lr-mgba" "lr-gb" ;;
-    24) multi-cores "GameBoy Advacnce" "lr-mgba" "NO" "NO";;
-    25) install-emu "GameBoy Color" "lr-tgbdual" ;;
-    26) install-emu "Game Gear" "lr-genesis-plus-gx" "NO" "NO" ;;
-    27) install-emu "Intellivision" "lr-freeintv" ;;
-    28) install-emu "Markiii" ;;
-    29) install-emu "Mastersystem" "lr-smsplus-gx" ;;
-    30) install-emu "Megadrive" "lr-genesis-plus-gx" ;;
-    31) install-emu "SNES" "lr-snes9x" ;;
-    32) install-emu "MSX" "lr-bluemsx" "lr-fmsx" ;;
-    33) install-emu "MSX2" "lr-bluemsx" "lr-fmsx" ;;
-    34) multi-cores "N64" "lr-parallel-n64" ;;
-    35) install-emu "Naomi" ;;
-    36) multi-cores "NDS" "lr-desume2015" "lr-desume" "drastic" ;;
-    37) install-emu "NeoGeo" "lr-neocd" ;;
-    38) install-emu "NeoGeo Pocket Color" ;;
-    39) multi-cores "NES" "lr-quicknes" ;;
-    40) install-emu "Openbor" ;;
-    41) install-emu "Oric" ;;
-    42) install-emu "Pokemini" "pokemini" ;;
-    43) install-emu "PS1" "lr-pcsx_rearmed" ;;
-    44) mess-system "plugnplay" ;;
-    45) multi-cores "PSP" "lr-ppsspp" "NONE" "ppsspp" ;;
-    46) install-emu "Sega Model-3" "lr-snes9x" ;;
-    47) install-emu "Sega Saturn" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
-    48) multi-cores "Sega Saturn Japan" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
-    49) install-emu "ScummVM" "lr-scummvm" "NO" "scummvm" ;;
-    50) install-emu "Sega32x" ;;
-    51) install-emu "SegaCD" "lr-picodrive" ;;
-    52) install-emu "SFC" ;;
-    53) install-emu "SG-1000" "lr-genesis-plus-gx" ;;
-    54) multi-cores2 "SNES" "lr-snes9x" "lr-bsnes" "lr-snes9x2002" ;;
-    55) install-emu "SNES-MSU1" "lr-snes9x" ;;
-    56) install-emu "SuperGrafx" "lr-beetle" ;;
-    57) install-emu "TurboGrafx-16" "lr-snes9x" ;;
-    58) install-emu "Vectrex" "lr-vecx" ;;
-    59) install-emu "Videopac" ;;
-    60) install-emu "Virtualboy" "lr-bettle-vb" ;;
-    61) install-emu "VMU" "lr-vemulator.sh" ;;
-    62) install-wine ;;
-    63) install-emu "Wonderswancolor" "lr-bettle-wsan";;
-    64) install-emu "X1" ;;
-    65) install-emu "X68000" "lr-px68k" ;;
-    66) install-emu "Zmachine" ;;
-    67) install-emu "ZXspectrum" ;;
-     +) none  ;;
+    1) install-emu "Astrocade" ;;
+    2) install-emu "Atari800" ;;
+    3) install-emu "Atari2600" "lr-stella" ;;
+    4) install-emu "Electron" ;;
+    5) install-emu "Famicon" ;;
+    6) install-emu "FDS" ;;
+    7) install-emu "Game&Watch" "lr-gw" ;;
+    8) multi-cores "GameBoy" "lr-mgba" "lr-gb" ;;
+    9) multi-cores "GameBoy Advacnce" "lr-mgba" "NO" "NO";;
+    10) install-emu "GameBoy Color" "lr-tgbdual" ;;
+    11) install-emu "Game Gear" "lr-genesis-plus-gx" "NO" "NO" ;;
+    12) install-emu "Megadrive" "lr-genesis-plus-gx" ;;
+    13) multi-cores "NES" "lr-quicknes" ;;
+    14) install-emu "Pokemini" "pokemini" ;;
+    15) install-emu "Sega32x" ;;
+    16) install-emu "SegaCD" "lr-picodrive" ;;
+    17) install-emu "SFC" ;;
+    18) install-emu "SG-1000" "lr-genesis-plus-gx" ;;
+    19) multi-cores2 "SNES" "lr-snes9x" "lr-bsnes" "lr-snes9x2002" ;;
+    20) install-emu "SNES-MSU1" "lr-snes9x" ;;
     T1) update-setup-script ;;
     T2) update-pidei ;;
     T3) pidei-info ;;
