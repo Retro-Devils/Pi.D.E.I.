@@ -135,7 +135,7 @@ function emu-menu() {
     39) install-emu "NeoGeo" "lr-neocd" ;;
     40) install-emu "NeoGeo Pocket Color" "lr-beetle-ngp" ;;
     41) multi-cores "NES" "lr-quicknes" "lr-nestopia" ;;
-    42) install-openbor ;;
+    42) install-emu "OpenBOR" "openbor" ;;
     43) install-emu "Oric" ;;
     44) install-emu "Pokemini" "lr-pokemini" ;;
     45) multi-cores "PS1" "lr-pcsx_rearmed" ;;
@@ -288,11 +288,12 @@ sleep 2
 cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh actionmax
 }
 
-function install-openbor() {
-wget -m -r -np -nH -nd -R "index.html" https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/emulators/openbor-extra.sh -P $HOME/RetroPie-Setup/scriptmodules/emulators/ -erobots=off
-sleep 2
-cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh openbor-extra
-}
+#-----Somethings Broke Here------#
+#function install-openbor() {
+#wget -m -r -np -nH -nd -R "index.html" https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/emulators/openbor-extra.sh -P $HOME/RetroPie-Setup/scriptmodules/emulators/ -erobots=off
+#sleep 2
+#cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh openbor-extra
+#}
 
 function install-model-3() {
 curl -sSL https://git.io/JSDOy | bash
