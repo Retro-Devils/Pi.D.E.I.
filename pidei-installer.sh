@@ -26,17 +26,17 @@ function pidei-install-menu() {
 }
 
 function install-pidei() {
-if [ -d "$HOME/pidei/" ]; then sudo rm -R "$HOME"/pidei/; fi
+if [ -d "$HOME//Pi.D.E.I.//" ]; then sudo rm -R "$HOME"/Pi.D.E.I./; fi
 if [ -f "$HOME/RetroPie/retropiemenu/pidei.sh" ]; then sudo rm "$HOME"/RetroPie/retropiemenu/pidei.sh; fi
 if [ -f "/usr/local/bin/pidei" ]; then sudo rm /usr/local/bin/pidei; fi
 cd $HOME
 git clone https://github.com/Retro-Devils/Pi.D.E.I.
 sudo wget -O "/usr/local/bin/pidei" https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei.sh
-cp "$HOME"/pidei/pidei.sh -f "$HOME"/RetroPie/retropiemenu/
-cp "$HOME"/pidei/pi-dei-logo.png -f "$HOME"/RetroPie/retropiemenu/icons/
+cp "$HOME"/Pi.D.E.I./pidei.sh -f "$HOME"/RetroPie/retropiemenu/
+cp "$HOME"/Pi.D.E.I./pi-dei-logo.png -f "$HOME"/RetroPie/retropiemenu/icons/
 sudo chmod 755 /usr/local/bin/pidei
 chmod 755 "$HOME"/RetroPie/retropiemenu/pidei.sh
-chmod -R 755 $HOME/pidei
+chmod -R 755 $HOME//Pi.D.E.I./
 sleep 2
 if [ ! -s "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then sudo rm -f $HOME/RetroPie/retropiemenu/gamelist.xml; fi
 if [ ! -f "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml $HOME/RetroPie/retropiemenu/gamelist.xml; fi
