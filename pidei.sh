@@ -10,5 +10,5 @@ elif [ "$rpi" = "2" ]; then bash $HOME/Pi.D.E.I./scripts/pidei-2.sh
 elif [ "$rpi" = "3" ]; then bash $HOME/Pi.D.E.I./scripts/pidei-2.sh
 elif [ "$rpi" = "4" ]; then bash $HOME/Pi.D.E.I./scripts/pi-dei-4.sh
 else
-{$HOME}/Devils-Box/scripts/pidei-other.sh
+{$HOME}/Pi.D.E.I./scripts/pidei-other.sh
 fi
