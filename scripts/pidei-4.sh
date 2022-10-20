@@ -15,7 +15,7 @@ function emu-menu() {
       + "<                                         >" \
       + "<-->CONSOLE NAME<------------->CORE/EMU<-->" \
       + "<                                         >" \
-      1 "ActionMax<-------------------->EMU--ACTIONMAX" /
+      1 "ActionMax<-------------------->EMU--ACTIONMAX" \
       2 "Amiga<------------------------>MULTI CORES/EMUS" \
       3 "AmigaCD32<-------------------->RA PUAE" \
       4 "Amstrad CPC<------------------>RA CAPRICE32" \
