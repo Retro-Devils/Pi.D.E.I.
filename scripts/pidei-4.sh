@@ -91,6 +91,12 @@ function emu-menu() {
       T2 "PI.D.E.I UPDATER                       " \
       T3 "PI.D.E.I INFORMATION                   " \
       T4 "PI.D.E.I CREDITS                       " \
+       - "  _____   _     ___     _____   ______  " \
+       - " |  __ | |_|   |    \  |  ___| |_    _| " \
+       - " |  ___|  _    |  |  \ | |__     |  |   " \
+       - " | |     | |   |  |  | |  __|    |  |   " \
+       - " | |     | |   |  |  / | |___   _|  |_  " \
+       - " |_|     |_|   |___/   |_____| |______| " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -168,6 +174,7 @@ function emu-menu() {
     T2) update-pidei ;;
     T3) pidei-info ;;
     T4) pidei-credits ;;
+     -) no ;;
      *) break ;;
     esac
    done
