@@ -13,6 +13,7 @@
 - Install multi Retroarch cores with one button push
 - After Install info for complex systems/platforms
 
+
 <-------------------------------------------------------------------------------------------------------->
 
 # Offical Emus Supported 
@@ -34,10 +35,8 @@ If missing please put in a issue on here or report wherever
 - PlugNPlay (Jakks)
 - coming soon
 
-# Experimental Unoffical Emus Supported 
-- None Currently 
 
-<-------------------------------------------------------------------------------------------------------->
+<---------------------------------------------------------------------------------------------->
 
 # Installation
 - Press f4 in Retropie. Or open a terminal
