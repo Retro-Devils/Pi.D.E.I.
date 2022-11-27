@@ -21,7 +21,7 @@ function emu-menu() {
       4 "Amstrad CPC<------------------>RA CAPRICE32" \
       5 "Arcade<----------------------->MULTI CORES/EMUS" \
       6 "Arcadia<---------------------->" \
-      7 "Astrocade<-------------------->" \
+      7 "Astrocade<-------------------->RA MESS" \
       8 "Atari800<--------------------->RA ATARI800"\
       9 "Atari2600<-------------------->RA STELLA" \
       10 "Atari5200<-------------------->RA ATARI800" \
@@ -35,7 +35,7 @@ function emu-menu() {
       18 "Dragon32<-------------------->EMU--XROAR" \
       19 "Daphne<---------------------->EMU--DAPHNE" \
       20 "Dreamcast<------------------->MULTI CORES/EMUS" \
-      21 "Electron<-------------------->" \
+      21 "Electron<-------------------->RA MESS " \
       22 "Famicon<--------------------->" \
       23 "Famicom Disk<---------------->" \
       24 "Game and Watch<-------------->" \
@@ -100,13 +100,13 @@ function emu-menu() {
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) install-action max ;;
+    1) install-actionmax ;;
     2) install-emu "Amiga" "lr-puae" ;;
     3) install-emu "Amigacd32" "lr-puae" ;;
     4) install-emu "Amstradcpc" "lr-caprice32" ;;
     5) multi-cores3 "Arcade" "lr-mame2003" "lr-fbaplha2012" "lr-mame200" "lr-mame2003-plus" "mame" ;;
-    6) install-emu "Arcadia" ;;
-    7) install-emu "Astrocade" ;;
+    6) mess-system "Arcadia" "arcadia" ;;
+    7) mess-system "Astrocade" "astrocade" ;;
     8) install-emu "Atari800" "atari800" ;;
     9) multi-cores "Atari2600" "lr-stella" "----" "stella" ;;
     10) install-emu "Atari5200" "lr-atari800";;
@@ -120,8 +120,8 @@ function emu-menu() {
     18) install-emu "Dragon32" "xroar" ;;
     19) install-emu "Daphne" "daphne" ;;
     20) install-emu "Dreamcast" "lr-dreamcast" "lr-flycast" "redream" ;;
-    21) install-emu "Electron" ;;
-    22) install-emu "Famicon" ;;
+    21) mess-system "Electron" "electron";;
+    22) install-emu "Famicon" "lr-nestopia";;
     23) install-emu "FDS" ;;
     24) install-emu "Game&Watch" "lr-gw" ;;
     25) multi-cores "GameBoy" "lr-mgba" "lr-gb" ;;
@@ -277,16 +277,6 @@ PI.D.E.I. WILL NOW INSTALL WINE/BOX86
 curl -sSL https://bit.ly/3P2HiW8 | bash
 }
 
-function mess-system() {
-if [ -f "$HOME"/pidei/mess-confirm.sh ]; then
-wget -m -r -np -nH -nd -R "index.html" https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/libretrocores/lr-mess-"${1}".sh -P "$HOME"/RetroPie-Setup/scriptmodules/libretrocores/ -erobots=off
-sleep 2 
-cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh lr-mess-"$1"
-else
-bash $HOME/pidei/scripts/mess/mess-menu.sh
-fi
-}
-
 
 
 function install-actionmax() {
@@ -308,9 +298,37 @@ curl -sSL https://git.io/JSDOy | bash
 
 
 function install-bbc() {
-curl -sSL bit.ly/BBC-Installer| bash
+curl -sSL bit.ly/BBC-Installer | bash
 }
 
+function mess-system() {
+mess-check
+sleep 1
+if [ ! -f "$HOME/RetroPie-Setup/scriptmodules/libretrocores/lr-mess-"$2".sh" ]; then wget https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/libretrocores/lr-mess-"$2".sh -P $HOME/RetroPie-Setup/scriptmodules/libretrocores/; fi
+if [ -f "opt/retropie/lr-mess-"$2"/mess_"$2"_libretro.so" ]; then 
+dialog  --sleep 1 --title "INSTALL ERROR" --msgbox "
+"$1" IS ALREADY INSTALLED
+NO NEED TO INSTALL" 0 0
+else
+cd $HOME/RetroPie-Setup
+sudo ./retropie_packages.sh lr-mess-"$2"
+cd
+fi
+}
+
+function mess-check() {
+if [ ! -f "/opt/retropie/libretrocores/lr-mess/mess_libretro.so" ]
+then
+dialog  --sleep 1 --title "LR MESS ERROR" --msgbox "
+MESS NOT INSTALLED
+INSTALLING NOW" 0 0
+cd $HOME/RetroPie-Setup
+sudo ./retropie_packages.sh lr-mess
+cd
+echo "MESS Install Complete"
+sleep 4
+fi
+}
 
 ###-----------------------------PI.D.E.I TOOLS-----------------------------###
 
