@@ -61,29 +61,30 @@ function emu-menu() {
       44 "Pokemini<-------------------->" \
       45 "PlayStation 1<--------------->MULTI CORES/EMUS" \
       46 "Plug N Play<----------------->RA MESS SYSTEM" \
-      47 "PSP<------------------------->MULTI CORES/EMUS" \
-      48 "Sega Model 3<---------------->EMU--" \
-      49 "Sega Saturn<----------------->CORE/EMU" \
-      50 "Sega Saturn Japan<----------->CORE/EMU" \
-      51 "ScummVM<--------------------->CORE/EMU" \
-      52 "Sega32x<--------------------->CORE/EMU" \
-      53 "SegaCD<---------------------->CORE/EMU" \
-      54 "Super Famicon<--------------->CORE/EMU" \
-      55 "SG-1000<--------------------->CORE/EMU" \
-      56 "SNES<------------------------>CORE/EMU" \
-      57 "SNES MSU1<------------------->CORES/EMU" \
-      58 "SuperGraffiix<--------------->RA BEETLE SUPERGRAX" \
-      59 "Turbo Graffix 16/PC Engine<-->RA BEETLE PCE FAST" \
-      60 "Vectrex<--------------------->CORE/EMU" \
-      61 "VideoPAC<-------------------->CORE/EMU" \
-      62 "Virtual Boy<----------------->CORE/EMU" \
-      63 "VMU Dreamcast<--------------->CORE/EMU" \
-      64 "Wine<------------------------>EMU--WINE/BOX86" \
-      65 "Wonderswan Color<------------>RA BEETLE WSWAN" \
-      66 "Sharp X1<-------------------->CORE/EMU" \
-      67 "Sharp X68000<---------------->CORE/EMU" \
-      68 "ZMachine<-------------------->CORE/EMU" \
-      69 "ZXSpectrum<------------------>CORE/EMU" \
+      47 "Pokitto<--------------------->EMU--POKITTO" \
+      48 "PSP<------------------------->MULTI CORES/EMUS" \
+      49 "Sega Model 3<---------------->EMU--" \
+      50 "Sega Saturn<----------------->CORE/EMU" \
+      51 "Sega Saturn Japan<----------->CORE/EMU" \
+      52 "ScummVM<--------------------->CORE/EMU" \
+      53 "Sega32x<--------------------->CORE/EMU" \
+      54 "SegaCD<---------------------->CORE/EMU" \
+      55 "Super Famicon<--------------->CORE/EMU" \
+      56 "SG-1000<--------------------->CORE/EMU" \
+      57 "SNES<------------------------>CORE/EMU" \
+      58 "SNES MSU1<------------------->CORES/EMU" \
+      59 "SuperGraffiix<--------------->RA BEETLE SUPERGRAX" \
+      60 "Turbo Graffix 16/PC Engine<-->RA BEETLE PCE FAST" \
+      61 "Vectrex<--------------------->CORE/EMU" \
+      62 "VideoPAC<-------------------->CORE/EMU" \
+      63 "Virtual Boy<----------------->CORE/EMU" \
+      64 "VMU Dreamcast<--------------->CORE/EMU" \
+      65 "Wine<------------------------>EMU--WINE/BOX86" \
+      66 "Wonderswan Color<------------>RA BEETLE WSWAN" \
+      67 "Sharp X1<-------------------->CORE/EMU" \
+      68 "Sharp X68000<---------------->CORE/EMU" \
+      69 "ZMachine<-------------------->CORE/EMU" \
+      70 "ZXSpectrum<------------------>CORE/EMU" \
        + "<                                     >" \
        + "<-----------Pi.D.E.I Tools------------>" \
        + "<                                     >" \
@@ -146,29 +147,30 @@ function emu-menu() {
     44) install-emu "Pokemini" "lr-pokemini" ;;
     45) multi-cores "PS1" "lr-pcsx_rearmed" ;;
     46) mess-system "plugnplay" ;;
-    47) multi-cores "PSP" "lr-ppsspp" "----" "ppsspp" ;;
-    48) install-model-3 ;;
-    49) install-emu "Sega Saturn" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
-    50) multi-cores "Sega Saturn Japan" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
-    51) install-emu "ScummVM" "lr-scummvm" "----" "scummvm" ;;
-    52) install-emu "Sega32x" ;;
-    53) install-emu "SegaCD" "lr-picodrive" ;;
-    54) install-emu "SFC" ;;
-    55) install-emu "SG-1000" "lr-genesis-plus-gx" ;;
-    56) multi-cores2 "SNES" "lr-snes9x" "lr-bsnes" "lr-snes9x2002" ;;
-    57) install-emu "SNES-MSU1" "lr-snes9x" ;;
-    58) install-emu "SuperGrafx" "lr-beetle-supergrafx" ;;
-    59) install-emu "TurboGrafx-16" "lr-beetle-pce-fast" ;;
-    60) install-emu "Vectrex" "lr-vecx" ;;
-    61) install-emu "Videopac" ;;
-    62) install-emu "Virtualboy" "lr-bettle-vb" ;;
-    63) install-emu "VMU" "lr-vemulator.sh" ;;
-    64) install-wine ;;
-    65) install-emu "Wonderswancolor" "lr-bettle-wsan";;
-    66) install-emu "X1" ;;
-    67) install-emu "X68000" "lr-px68k" ;;
-    68) install-emu "Zmachine" ;;
-    69) multi-cores "ZXspectrum" "lr-fuse" "----" "zesarux" ;;
+    47) install-pokitto ;;
+    48) multi-cores "PSP" "lr-ppsspp" "----" "ppsspp" ;;
+    49) install-model-3 ;;
+    50) install-emu "Sega Saturn" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
+    51) multi-cores "Sega Saturn Japan" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
+    52) install-emu "ScummVM" "lr-scummvm" "----" "scummvm" ;;
+    53) install-emu "Sega32x" ;;
+    54) install-emu "SegaCD" "lr-picodrive" ;;
+    55) install-emu "SFC" ;;
+    56) install-emu "SG-1000" "lr-genesis-plus-gx" ;;
+    57) multi-cores2 "SNES" "lr-snes9x" "lr-bsnes" "lr-snes9x2002" ;;
+    58) install-emu "SNES-MSU1" "lr-snes9x" ;;
+    59) install-emu "SuperGrafx" "lr-beetle-supergrafx" ;;
+    60) install-emu "TurboGrafx-16" "lr-beetle-pce-fast" ;;
+    61) install-emu "Vectrex" "lr-vecx" ;;
+    62) install-emu "Videopac" ;;
+    63) install-emu "Virtualboy" "lr-bettle-vb" ;;
+    64) install-emu "VMU" "lr-vemulator.sh" ;;
+    65) install-wine ;;
+    66) install-emu "Wonderswancolor" "lr-bettle-wsan";;
+    67) install-emu "X1" ;;
+    68) install-emu "X68000" "lr-px68k" ;;
+    69) install-emu "Zmachine" ;;
+    70) multi-cores "ZXspectrum" "lr-fuse" "----" "zesarux" ;;
      +) none  ;;
     T1) update-setup-script ;;
     T2) update-pidei ;;
@@ -299,6 +301,10 @@ curl -sSL https://git.io/JSDOy | bash
 
 function install-bbc() {
 curl -sSL bit.ly/BBC-Installer | bash
+}
+
+function install-pokitto() {
+curl -sSL bit.ly/Pokitto-Installer | bash
 }
 
 function mess-system() {
