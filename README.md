@@ -25,15 +25,7 @@ If missing please put in a issue on here or report wherever
 - Model 3
 - Wine
 - SNES MSU1
-- BBC (coming soon)
-
-# MESS/MAME Systems Supported
-
-- Over time we will be intergating all from RPI MESS Tool. 
-
-A system list can be found here:
-
-https://github.com/Retro-Devils/RPI-MESS-Tool#system-list
+- BBC 
 
 <---------------------------------------------------------------------------------------------->
 
